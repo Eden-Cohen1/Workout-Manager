@@ -99,7 +99,7 @@ namespace winformsTEST
         {
             // getting all of the data from the needed forms, converting it to
             // the correct data type and sending to the right constructor, then
-            // adding the new exercise that was created to the exercise list of the last workout.
+            // adding the new exercise that was created to the exercise list of the last workout..
 
             if (ExType == 1)                  
             {
