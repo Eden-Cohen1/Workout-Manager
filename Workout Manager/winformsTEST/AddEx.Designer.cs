@@ -45,6 +45,7 @@ namespace winformsTEST
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.changeByType = new System.Windows.Forms.Panel();
             this.doneAddingEx = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.typeDropDown.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -216,7 +217,7 @@ namespace winformsTEST
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.Controls.Add(this.doneAddingEx);
             this.Controls.Add(this.changeByType);
             this.Controls.Add(this.label4);
@@ -250,5 +251,6 @@ namespace winformsTEST
         private System.Windows.Forms.Panel changeByType;
         private System.Windows.Forms.Button doneAddingEx;
         private System.Windows.Forms.Button HIIT;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

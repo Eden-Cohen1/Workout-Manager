@@ -18,14 +18,20 @@ namespace winformsTEST
     {
         public static Form1 instance;
         public static myWorkouts screen;
+        public static AddWorkout screen2;
+
         public Form1()
         {
             InitializeComponent();
             /*            this.WindowState = FormWindowState.Normal;
                         this.Size = new Size(1150, 800);*/
+            /*            this.WindowState = FormWindowState.Maximized;
+*/
+
             screen = new myWorkouts();
-            this.WindowState = FormWindowState.Maximized;
+            screen2 = new AddWorkout();
             secPanel.AutoSize = true;
+            
             instance = this;
         }
         public Form1(string name)
@@ -35,16 +41,17 @@ namespace winformsTEST
 
         private void newWorkout_Click(object sender, EventArgs e)
         {
-            AddWorkout screen = new AddWorkout();
-            secPanel.Controls.Add(screen);
-            screen.BringToFront();
-            screen.Size = this.Size;
+            secPanel.Controls.Add(screen2);
+            screen2.BringToFront();
+            screen2.Size = secPanel.Size;
 
         }
 
         private void Home_Click(object sender, EventArgs e)
         {
             secPanel.Controls.Clear();
+            Form1 newform = new Form1();
+            secPanel.Controls.Add(newform);
             secPanel.BackColor = Color.White;
         }
 
@@ -77,6 +84,22 @@ namespace winformsTEST
                 var listviewitem = new ListViewItem(listnames);
                 myWorkouts.instance.myWorkoutsList.Items.Add(listviewitem);
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            secPanel.Controls.Add(background);
+            secPanel.Controls.Add(Home);
+            background.BringToFront();
+            Home.BringToFront();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            secPanel.Controls.Add(background);
+            secPanel.Controls.Add(Home);
+            background.BringToFront();
+            Home.BringToFront();
         }
     }
 }

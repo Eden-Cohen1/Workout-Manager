@@ -24,5 +24,25 @@ namespace winformsTEST
         {
 
         }
+
+
+        private void ViewWorkout_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem item in myWorkoutsList.Items)
+            {
+                if (item.Selected == true)
+                {
+                    WorkoutPage screen = new WorkoutPage();
+                    Form1.instance.secPanel.Controls.Add(screen);
+                    screen.BringToFront();
+                }
+            }
+        }
     }
 }
+//for testing
+
+/*                    Label testlabel = new Label();
+                    Form1.instance.secPanel.Controls.Add(testlabel);
+                    testlabel.BringToFront();
+                    testlabel.Size = new Size(700, 700);*/

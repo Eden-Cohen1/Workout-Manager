@@ -285,7 +285,7 @@ namespace winformsTEST
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.Controls.Add(this.muscleList);
             this.Controls.Add(this.Exlistlabel);
             this.Controls.Add(this.ExList);
@@ -302,7 +302,8 @@ namespace winformsTEST
             this.Controls.Add(this.Description);
             this.Controls.Add(this.label1);
             this.Name = "AddWorkout";
-            this.Size = new System.Drawing.Size(973, 673);
+            this.Size = new System.Drawing.Size(995, 755);
+            this.Load += new System.EventHandler(this.AddWorkout_Load);
             this.typeDropDown.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

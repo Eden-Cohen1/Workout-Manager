@@ -95,5 +95,9 @@ namespace winformsTEST
             dropDown.Text = CardioW.Text;
         }
 
+        private void AddWorkout_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

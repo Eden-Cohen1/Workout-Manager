@@ -14,3 +14,25 @@ C:\Users\eden7\source\repos\winformsTEST\winformsTEST\obj\Debug\winformsTEST.Str
 C:\Users\eden7\source\repos\winformsTEST\winformsTEST\obj\Debug\winformsTEST.EnduranceEx.resources
 C:\Users\eden7\source\repos\winformsTEST\winformsTEST\obj\Debug\winformsTEST.HIITEx.resources
 C:\Users\eden7\source\repos\winformsTEST\winformsTEST\obj\Debug\winformsTEST.myWorkouts.resources
+C:\Users\eden7\Source\Repos\Workout-Manager\Workout Manager\winformsTEST\obj\Debug\winformsTEST.csproj.AssemblyReference.cache
+C:\Users\eden7\Source\Repos\Workout-Manager\Workout Manager\winformsTEST\obj\Debug\winformsTEST.AddEx.resources
+C:\Users\eden7\Source\Repos\Workout-Manager\Workout Manager\winformsTEST\obj\Debug\winformsTEST.AddWorkout.resources
+C:\Users\eden7\Source\Repos\Workout-Manager\Workout Manager\winformsTEST\obj\Debug\winformsTEST.EnduranceEx.resources
+C:\Users\eden7\Source\Repos\Workout-Manager\Workout Manager\winformsTEST\obj\Debug\winformsTEST.Form1.resources
+C:\Users\eden7\Source\Repos\Workout-Manager\Workout Manager\winformsTEST\obj\Debug\winformsTEST.myWorkouts.resources
+C:\Users\eden7\Source\Repos\Workout-Manager\Workout Manager\winformsTEST\obj\Debug\winformsTEST.Properties.Resources.resources
+C:\Users\eden7\Source\Repos\Workout-Manager\Workout Manager\winformsTEST\obj\Debug\winformsTEST.HIITEx.resources
+C:\Users\eden7\Source\Repos\Workout-Manager\Workout Manager\winformsTEST\obj\Debug\winformsTEST.StrenghtEx.resources
+C:\Users\eden7\Source\Repos\Workout-Manager\Workout Manager\winformsTEST\obj\Debug\winformsTEST.csproj.GenerateResource.cache
+C:\Users\eden7\Source\Repos\Workout-Manager\Workout Manager\winformsTEST\obj\Debug\winformsTEST.csproj.CoreCompileInputs.cache
+C:\Users\eden7\Source\Repos\Workout-Manager\Workout Manager\winformsTEST\obj\Debug\winformsTEST.exe
+C:\Users\eden7\Source\Repos\Workout-Manager\Workout Manager\winformsTEST\obj\Debug\winformsTEST.pdb
+C:\Users\eden7\Source\Repos\Workout-Manager\Workout Manager\winformsTEST\bin\Debug\winformsTEST.exe.config
+C:\Users\eden7\Source\Repos\Workout-Manager\Workout Manager\winformsTEST\bin\Debug\winformsTEST.exe
+C:\Users\eden7\Source\Repos\Workout-Manager\Workout Manager\winformsTEST\bin\Debug\winformsTEST.pdb
+C:\Users\eden7\source\repos\Workout-Manager\Workout Manager\winformsTEST\obj\Debug\winformsTEST.WorkoutPage.resources
+C:\Users\eden7\source\repos\Workout-Manager\Workout Manager\winformsTEST\bin\Debug\CircularProgressBar.dll
+C:\Users\eden7\source\repos\Workout-Manager\Workout Manager\winformsTEST\bin\Debug\WinFormAnimation.dll
+C:\Users\eden7\source\repos\Workout-Manager\Workout Manager\winformsTEST\bin\Debug\CircularProgressBar.xml
+C:\Users\eden7\source\repos\Workout-Manager\Workout Manager\winformsTEST\bin\Debug\WinFormAnimation.xml
+C:\Users\eden7\source\repos\Workout-Manager\Workout Manager\winformsTEST\obj\Debug\winformsTEST.csproj.CopyComplete

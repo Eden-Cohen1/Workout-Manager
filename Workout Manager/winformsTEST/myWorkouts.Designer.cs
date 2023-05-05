@@ -35,10 +35,11 @@ namespace winformsTEST
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.myWorkoutsList = new System.Windows.Forms.ListView();
-            this.Duration = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Description = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.durationCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.nameCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.typeCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.descripCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ViewWorkout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // myWlabel
@@ -46,7 +47,7 @@ namespace winformsTEST
             this.myWlabel.AutoSize = true;
             this.myWlabel.Font = new System.Drawing.Font("Segoe Print", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.myWlabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.myWlabel.Location = new System.Drawing.Point(48, 46);
+            this.myWlabel.Location = new System.Drawing.Point(68, 56);
             this.myWlabel.Name = "myWlabel";
             this.myWlabel.Size = new System.Drawing.Size(242, 47);
             this.myWlabel.TabIndex = 23;
@@ -57,7 +58,7 @@ namespace winformsTEST
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(51, 164);
+            this.label1.Location = new System.Drawing.Point(75, 183);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 28);
             this.label1.TabIndex = 24;
@@ -68,7 +69,7 @@ namespace winformsTEST
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(286, 164);
+            this.label2.Location = new System.Drawing.Point(282, 210);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 28);
             this.label2.TabIndex = 25;
@@ -79,7 +80,7 @@ namespace winformsTEST
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(526, 164);
+            this.label3.Location = new System.Drawing.Point(525, 199);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 28);
             this.label3.TabIndex = 26;
@@ -90,7 +91,7 @@ namespace winformsTEST
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(756, 164);
+            this.label4.Location = new System.Drawing.Point(749, 199);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 28);
             this.label4.TabIndex = 27;
@@ -98,56 +99,75 @@ namespace winformsTEST
             // 
             // myWorkoutsList
             // 
-            this.myWorkoutsList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
+            this.myWorkoutsList.Activation = System.Windows.Forms.ItemActivation.TwoClick;
+            this.myWorkoutsList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.myWorkoutsList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Duration,
-            this.Name,
-            this.Type,
-            this.Description});
-            this.myWorkoutsList.ForeColor = System.Drawing.SystemColors.Menu;
+            this.durationCol,
+            this.nameCol,
+            this.typeCol,
+            this.descripCol});
+            this.myWorkoutsList.Cursor = System.Windows.Forms.Cursors.Default;
+            this.myWorkoutsList.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.myWorkoutsList.ForeColor = System.Drawing.Color.White;
+            this.myWorkoutsList.FullRowSelect = true;
             this.myWorkoutsList.HideSelection = false;
-            this.myWorkoutsList.Location = new System.Drawing.Point(56, 195);
+            this.myWorkoutsList.Location = new System.Drawing.Point(60, 124);
             this.myWorkoutsList.Name = "myWorkoutsList";
             this.myWorkoutsList.Size = new System.Drawing.Size(941, 439);
             this.myWorkoutsList.TabIndex = 28;
             this.myWorkoutsList.UseCompatibleStateImageBehavior = false;
             this.myWorkoutsList.View = System.Windows.Forms.View.Details;
             // 
-            // Duration
+            // durationCol
             // 
-            this.Duration.DisplayIndex = 1;
-            this.Duration.Text = "Durtaion";
-            this.Duration.Width = 239;
+            this.durationCol.DisplayIndex = 1;
+            this.durationCol.Text = "Durtaion";
+            this.durationCol.Width = 239;
             // 
-            // Name
+            // nameCol
             // 
-            this.Name.DisplayIndex = 0;
-            this.Name.Text = "Workout Name";
-            this.Name.Width = 230;
+            this.nameCol.DisplayIndex = 0;
+            this.nameCol.Text = "Workout Name";
+            this.nameCol.Width = 230;
             // 
-            // Type
+            // typeCol
             // 
-            this.Type.Text = "Type";
-            this.Type.Width = 230;
+            this.typeCol.Text = "Type";
+            this.typeCol.Width = 230;
             // 
-            // Description
+            // descripCol
             // 
-            this.Description.Text = "Description";
-            this.Description.Width = 230;
+            this.descripCol.Text = "Description";
+            this.descripCol.Width = 230;
+            // 
+            // ViewWorkout
+            // 
+            this.ViewWorkout.BackColor = System.Drawing.Color.RoyalBlue;
+            this.ViewWorkout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ViewWorkout.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewWorkout.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ViewWorkout.Location = new System.Drawing.Point(60, 586);
+            this.ViewWorkout.Name = "ViewWorkout";
+            this.ViewWorkout.Size = new System.Drawing.Size(147, 40);
+            this.ViewWorkout.TabIndex = 29;
+            this.ViewWorkout.Text = "View Workout";
+            this.ViewWorkout.UseVisualStyleBackColor = false;
+            this.ViewWorkout.Click += new System.EventHandler(this.ViewWorkout_Click);
             // 
             // myWorkouts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.Controls.Add(this.ViewWorkout);
             this.Controls.Add(this.myWorkoutsList);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.myWlabel);
-/*            this.Name = "myWorkouts";
-*/            this.Size = new System.Drawing.Size(1074, 692);
+            this.Name = "myWorkouts";
+            this.Size = new System.Drawing.Size(1074, 692);
             this.Load += new System.EventHandler(this.myWorkouts_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -159,11 +179,12 @@ namespace winformsTEST
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ColumnHeader Duration;
-        public System.Windows.Forms.ColumnHeader Name;
-        private System.Windows.Forms.ColumnHeader Type;
-        private System.Windows.Forms.ColumnHeader Description;
+        private System.Windows.Forms.ColumnHeader durationCol;
+        public System.Windows.Forms.ColumnHeader nameCol;
+        private System.Windows.Forms.ColumnHeader typeCol;
+        private System.Windows.Forms.ColumnHeader descripCol;
         public System.Windows.Forms.Label myWlabel;
         public System.Windows.Forms.ListView myWorkoutsList;
+        private System.Windows.Forms.Button ViewWorkout;
     }
 }
