@@ -43,10 +43,12 @@ namespace winformsTEST
             this.button2 = new System.Windows.Forms.Button();
             this.newWorkout = new System.Windows.Forms.Button();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.Headline = new System.Windows.Forms.Label();
             this.Muscle1 = new System.Windows.Forms.Label();
             this.secPanel = new System.Windows.Forms.Panel();
             this.background = new System.Windows.Forms.PictureBox();
-            this.Headline = new System.Windows.Forms.Label();
+            this.Exit = new System.Windows.Forms.Button();
+            this.Minimize = new System.Windows.Forms.Button();
             this.FirstPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -257,8 +259,10 @@ namespace winformsTEST
             // 
             // topPanel
             // 
-            this.topPanel.BackColor = System.Drawing.Color.SteelBlue;
+            this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.topPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.topPanel.Controls.Add(this.Minimize);
+            this.topPanel.Controls.Add(this.Exit);
             this.topPanel.Controls.Add(this.Headline);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.topPanel.Location = new System.Drawing.Point(233, 0);
@@ -266,6 +270,20 @@ namespace winformsTEST
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1215, 770);
             this.topPanel.TabIndex = 0;
+            // 
+            // Headline
+            // 
+            this.Headline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.Headline.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Headline.Font = new System.Drawing.Font("Segoe Print", 11.525F, System.Drawing.FontStyle.Bold);
+            this.Headline.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Headline.Location = new System.Drawing.Point(0, 0);
+            this.Headline.Name = "Headline";
+            this.Headline.Size = new System.Drawing.Size(1213, 49);
+            this.Headline.TabIndex = 21;
+            this.Headline.Text = "HOME";
+            this.Headline.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Headline.Click += new System.EventHandler(this.label1_Click);
             // 
             // Muscle1
             // 
@@ -297,19 +315,35 @@ namespace winformsTEST
             this.background.TabIndex = 20;
             this.background.TabStop = false;
             // 
-            // Headline
+            // Exit
             // 
-            this.Headline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.Headline.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Headline.Font = new System.Drawing.Font("Segoe Print", 11.525F, System.Drawing.FontStyle.Bold);
-            this.Headline.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Headline.Location = new System.Drawing.Point(0, 0);
-            this.Headline.Name = "Headline";
-            this.Headline.Size = new System.Drawing.Size(1213, 49);
-            this.Headline.TabIndex = 21;
-            this.Headline.Text = "HOME";
-            this.Headline.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Headline.Click += new System.EventHandler(this.label1_Click);
+            this.Exit.BackColor = System.Drawing.Color.Transparent;
+            this.Exit.FlatAppearance.BorderSize = 0;
+            this.Exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Exit.ForeColor = System.Drawing.Color.Transparent;
+            this.Exit.Image = ((System.Drawing.Image)(resources.GetObject("Exit.Image")));
+            this.Exit.Location = new System.Drawing.Point(1178, 9);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(32, 32);
+            this.Exit.TabIndex = 22;
+            this.Exit.UseVisualStyleBackColor = false;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            // 
+            // Minimize
+            // 
+            this.Minimize.FlatAppearance.BorderSize = 0;
+            this.Minimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Minimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Minimize.Image = ((System.Drawing.Image)(resources.GetObject("Minimize.Image")));
+            this.Minimize.Location = new System.Drawing.Point(1143, 9);
+            this.Minimize.Name = "Minimize";
+            this.Minimize.Size = new System.Drawing.Size(32, 32);
+            this.Minimize.TabIndex = 22;
+            this.Minimize.UseVisualStyleBackColor = true;
+            this.Minimize.Click += new System.EventHandler(this.Minimize_Click);
             // 
             // MainForm
             // 
@@ -321,6 +355,7 @@ namespace winformsTEST
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.Muscle1);
             this.Controls.Add(this.FirstPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -356,6 +391,8 @@ namespace winformsTEST
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.Label Headline;
+        private System.Windows.Forms.Button Exit;
+        private System.Windows.Forms.Button Minimize;
     }
 }
 

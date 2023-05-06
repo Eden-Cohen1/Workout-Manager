@@ -12,6 +12,7 @@ using EXERCISE;
 using System.Runtime.Serialization;//!!!!!!
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using System.Runtime.InteropServices;
 
 namespace winformsTEST
 {
@@ -22,7 +23,8 @@ namespace winformsTEST
         public static myWorkouts screen;
         public static AddWorkout screen2;
 
-        public MainForm()
+/*        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+*/        public MainForm()
         {
             InitializeComponent();
             screen = new myWorkouts();
@@ -67,6 +69,8 @@ namespace winformsTEST
             AddWorkout.instance.workoutAdded.Visible = false;
             Headline.Text = "ADDING A NEW WORKOUT ";
             Headline.BackColor = Color.FromName("RoyalBlue");
+            Minimize.BackColor = Color.FromName("RoyalBlue");
+            Exit.BackColor = Color.FromName("RoyalBlue");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -76,6 +80,9 @@ namespace winformsTEST
             screen.Size = this.Size;
             Headline.Text = "MY WORKOUTS";
             Headline.BackColor = Color.FromName("RoyalBlue");
+            Minimize.BackColor = Color.FromName("RoyalBlue");
+            Exit.BackColor = Color.FromName("RoyalBlue");
+            topPanel.BackColor = Color.FromName("RoyalBlue");
         }
 
 
@@ -85,11 +92,26 @@ namespace winformsTEST
             background.BringToFront();
             Headline.Text = "HOME";
             Headline.BackColor = Color.FromArgb(28, 26, 33);
+            Minimize.BackColor = Color.FromArgb(28, 26, 33);
+            Exit.BackColor = Color.FromArgb(28, 26, 33);
+            topPanel.BackColor = Color.FromName("RoyalBlue");
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
