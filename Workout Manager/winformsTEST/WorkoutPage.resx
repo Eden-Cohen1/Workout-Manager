@@ -120,4 +120,28 @@
   <metadata name="exerciseBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAAPVSURBVHhe7ZtNaBNBFMe3Hqwb9aCUnhT05NmCgh9gELSI
+        0k3FWhGsd7HWS5sFQUHQKtKbtxbstaFQQS966THpscW0lqKVttqLH/Hjvs7bvBcn49tNJmkzsc4ffmSz
+        8/bNe//dGWjSOFZWVlaboTdOz/asm3qcdb1PuUQqiOBjzk09gli8bOsou+viE6ZhFojFy7aOcm29P7lm
+        Wdou/8LLto7YRmPAy5pTO7w7+xMpf9JN+T/Ea8Bx+kR/8HJPD9ucDi/2XgqSJ/vZOYBiDemp3V2Dh7C8
+        UInu9Hlxfu2vazx/NZEaOodh+oLmXc//8ldihdftvWxDtfCq/Qo7h4ww4ivUhmU6xUb5WGHMCobpSySY
+        hCRd98aCt8trQaFQYKHiJ7YdFnSUNVQN6nXcHMDC8mpw4e5osTHPz2CZUKfSdDkYpi967Bfer7AFEX8a
+        6Qgyohl6Xy3qddwcxPy7lbApN5X+jmVungGUgCtEZuZAX1lD9TBz8Do7h4zaGL2PAsP0RQm4ImRmR6c2
+        xARofnbsOTuHjNoYvY8Cw/RFCbgiZNbX14N8Ph/Mzc3VBeSAXNwcMmpjXIwMhumrWgMajTVAMYBbTjIY
+        pi9rQAUDTg0+LRVDJMU5LjYO3TwUg2WaM4DGVbjYOLgcABcL0DiWaQ3gmpbBMH1VW4gKFxsHlwPgYgEa
+        xzIbbwCsWafjaqkQFTW+ElwOAObg9oLSOIprWgbD9EUTcQU0ygB4jYrHMpvPAOd+JnDGc9UhYrkcgDXA
+        GmANCF+5+cNxFNe0DIbpiybiCogzgPtLLw4uB9C0Bhy7NRJrgBpfCS4HAHMcHxiJjMcyG2/A4uJi7J1T
+        4yvB5QBgDpgrKh7LbLwBBI2rcLFxcDkALhagcSzTGsA1LYNh+qpUCOwFFENwa7YSunkoBss0ZwDtBTLc
+        mq2Ebp6mMcAU1gDTBtDH4NV+jL3RGDdA/g4Ajuk8t5brhdsLrAGmDfjvl4BpjBtgN0HROK1ROKbzdhO0
+        m2BjMG6AaYwbYDdB0TitUTim83YTtJtgYzBugGmMG9BsT0AhNz4tCCKYxjB9RRkAjdMahWM6b2oP+JZ9
+        lmQaD4ExDNPXv2IASDTLPQW1331QlAHNtgRA3FNQ190H0T9Lzy99YAsxQX5pOWze9fwCllmSqHeazIFj
+        PF274McJkOzszeGmMAGaP3NjuPgEeP4EllnSTi+dJAPgGE/XLvhlBvw4obXzdtBy9Fr4ZaVJWo70Ba2d
+        A+Lupz+73UP7sMwyibGHouYH+LZ+hT+Z8fwM/H8+uWuKsAZx56Oat7KysqpejvMbjaP69pDoyywAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
 </root>

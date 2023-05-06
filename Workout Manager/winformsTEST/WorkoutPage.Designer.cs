@@ -30,6 +30,7 @@ namespace winformsTEST
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WorkoutPage));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.ExerciseList = new System.Windows.Forms.ListView();
             this.nameCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -43,11 +44,13 @@ namespace winformsTEST
             this.IntensityCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.headline = new System.Windows.Forms.Label();
             this.deleteBTN = new System.Windows.Forms.Button();
-            this.exerciseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.editBTN = new System.Windows.Forms.Button();
+            this.exerciseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exerciseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -140,7 +143,7 @@ namespace winformsTEST
             this.headline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.headline.Font = new System.Drawing.Font("Segoe Print", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headline.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.headline.Location = new System.Drawing.Point(20, 31);
+            this.headline.Location = new System.Drawing.Point(20, 17);
             this.headline.Name = "headline";
             this.headline.Size = new System.Drawing.Size(315, 47);
             this.headline.TabIndex = 30;
@@ -161,10 +164,6 @@ namespace winformsTEST
             this.deleteBTN.UseVisualStyleBackColor = false;
             this.deleteBTN.Click += new System.EventHandler(this.deleteBTN_Click);
             // 
-            // exerciseBindingSource
-            // 
-            this.exerciseBindingSource.DataSource = typeof(EXERCISE.Exercise);
-            // 
             // editBTN
             // 
             this.editBTN.BackColor = System.Drawing.Color.RoyalBlue;
@@ -179,11 +178,25 @@ namespace winformsTEST
             this.editBTN.UseVisualStyleBackColor = false;
             this.editBTN.Click += new System.EventHandler(this.editBTN_Click);
             // 
+            // exerciseBindingSource
+            // 
+            this.exerciseBindingSource.DataSource = typeof(EXERCISE.Exercise);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(341, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(67, 64);
+            this.pictureBox1.TabIndex = 33;
+            this.pictureBox1.TabStop = false;
+            // 
             // WorkoutPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.editBTN);
             this.Controls.Add(this.deleteBTN);
             this.Controls.Add(this.headline);
@@ -195,6 +208,7 @@ namespace winformsTEST
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.exerciseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,5 +230,6 @@ namespace winformsTEST
         private System.Windows.Forms.Label headline;
         private System.Windows.Forms.Button deleteBTN;
         private System.Windows.Forms.Button editBTN;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

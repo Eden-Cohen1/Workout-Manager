@@ -38,11 +38,11 @@ namespace winformsTEST
             this.restTextBox = new System.Windows.Forms.TextBox();
             this.restTime = new System.Windows.Forms.Label();
             this.intenseDropDown = new System.Windows.Forms.FlowLayoutPanel();
+            this.intensityDropDown = new System.Windows.Forms.Button();
             this.Easy = new System.Windows.Forms.Button();
             this.Medium = new System.Windows.Forms.Button();
             this.Hard = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.intensityDropDown = new System.Windows.Forms.Button();
             this.setsTextBox = new System.Windows.Forms.TextBox();
             this.weightTextBox = new System.Windows.Forms.TextBox();
             this.repTextBox = new System.Windows.Forms.TextBox();
@@ -55,6 +55,8 @@ namespace winformsTEST
             this.Distance = new System.Windows.Forms.Label();
             this.avragePace = new System.Windows.Forms.Label();
             this.SaveChanges = new System.Windows.Forms.Button();
+            this.Exit = new System.Windows.Forms.Button();
+            this.Minimize = new System.Windows.Forms.Button();
             this.intenseDropDown.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,6 +131,23 @@ namespace winformsTEST
             this.intenseDropDown.Size = new System.Drawing.Size(237, 35);
             this.intenseDropDown.TabIndex = 33;
             // 
+            // intensityDropDown
+            // 
+            this.intensityDropDown.BackColor = System.Drawing.SystemColors.Control;
+            this.intensityDropDown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("intensityDropDown.BackgroundImage")));
+            this.intensityDropDown.Dock = System.Windows.Forms.DockStyle.Top;
+            this.intensityDropDown.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.intensityDropDown.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.intensityDropDown.Image = ((System.Drawing.Image)(resources.GetObject("intensityDropDown.Image")));
+            this.intensityDropDown.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.intensityDropDown.Location = new System.Drawing.Point(3, 3);
+            this.intensityDropDown.Name = "intensityDropDown";
+            this.intensityDropDown.Size = new System.Drawing.Size(230, 30);
+            this.intensityDropDown.TabIndex = 12;
+            this.intensityDropDown.Text = "Choose Intensity";
+            this.intensityDropDown.UseVisualStyleBackColor = false;
+            this.intensityDropDown.Click += new System.EventHandler(this.intensityDropDown_Click);
+            // 
             // Easy
             // 
             this.Easy.Dock = System.Windows.Forms.DockStyle.Top;
@@ -177,23 +196,6 @@ namespace winformsTEST
             this.label1.Size = new System.Drawing.Size(113, 33);
             this.label1.TabIndex = 31;
             this.label1.Text = "Intensity: ";
-            // 
-            // intensityDropDown
-            // 
-            this.intensityDropDown.BackColor = System.Drawing.SystemColors.Control;
-            this.intensityDropDown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("intensityDropDown.BackgroundImage")));
-            this.intensityDropDown.Dock = System.Windows.Forms.DockStyle.Top;
-            this.intensityDropDown.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.intensityDropDown.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.intensityDropDown.Image = ((System.Drawing.Image)(resources.GetObject("intensityDropDown.Image")));
-            this.intensityDropDown.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.intensityDropDown.Location = new System.Drawing.Point(3, 3);
-            this.intensityDropDown.Name = "intensityDropDown";
-            this.intensityDropDown.Size = new System.Drawing.Size(230, 30);
-            this.intensityDropDown.TabIndex = 12;
-            this.intensityDropDown.Text = "Choose Intensity";
-            this.intensityDropDown.UseVisualStyleBackColor = false;
-            this.intensityDropDown.Click += new System.EventHandler(this.intensityDropDown_Click);
             // 
             // setsTextBox
             // 
@@ -310,12 +312,44 @@ namespace winformsTEST
             this.SaveChanges.UseVisualStyleBackColor = false;
             this.SaveChanges.Click += new System.EventHandler(this.SaveChanges_Click);
             // 
+            // Exit
+            // 
+            this.Exit.BackColor = System.Drawing.Color.Transparent;
+            this.Exit.FlatAppearance.BorderSize = 0;
+            this.Exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Exit.ForeColor = System.Drawing.Color.Transparent;
+            this.Exit.Image = ((System.Drawing.Image)(resources.GetObject("Exit.Image")));
+            this.Exit.Location = new System.Drawing.Point(1031, 1);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(32, 32);
+            this.Exit.TabIndex = 49;
+            this.Exit.UseVisualStyleBackColor = false;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            // 
+            // Minimize
+            // 
+            this.Minimize.FlatAppearance.BorderSize = 0;
+            this.Minimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Minimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Minimize.Image = ((System.Drawing.Image)(resources.GetObject("Minimize.Image")));
+            this.Minimize.Location = new System.Drawing.Point(993, 1);
+            this.Minimize.Name = "Minimize";
+            this.Minimize.Size = new System.Drawing.Size(32, 32);
+            this.Minimize.TabIndex = 50;
+            this.Minimize.UseVisualStyleBackColor = true;
+            this.Minimize.Click += new System.EventHandler(this.Minimize_Click);
+            // 
             // EditEx
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(1061, 556);
+            this.Controls.Add(this.Minimize);
+            this.Controls.Add(this.Exit);
             this.Controls.Add(this.SaveChanges);
             this.Controls.Add(this.PaceTextBox);
             this.Controls.Add(this.distanceTextBox);
@@ -335,7 +369,9 @@ namespace winformsTEST
             this.Controls.Add(this.muscleTextBox);
             this.Controls.Add(this.exMuscleLable);
             this.Controls.Add(this.exNameLable);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditEx";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditEx";
             this.intenseDropDown.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -368,5 +404,7 @@ namespace winformsTEST
         public System.Windows.Forms.TextBox nameTextBox;
         public System.Windows.Forms.TextBox muscleTextBox;
         private System.Windows.Forms.Button SaveChanges;
+        private System.Windows.Forms.Button Exit;
+        private System.Windows.Forms.Button Minimize;
     }
 }
