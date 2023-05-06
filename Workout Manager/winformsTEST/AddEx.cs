@@ -35,8 +35,6 @@ namespace winformsTEST
         {
             if (isCollapsed)
             {
-                /*                dropDown.Image = Image.FromFile(@"C: \Users\eden7\OneDrive\Desktop\Assets\Up_Arrow.png");
-                */
                 typeDropDown.Height += 10;
                 if (typeDropDown.Size == typeDropDown.MaximumSize)
                 {
@@ -90,7 +88,7 @@ namespace winformsTEST
             ex.BringToFront();
             ex.Size = changeByType.Size;
             timer1.Start();
-            dropDown.Text = Stamina.Text;
+            dropDown.Text = HIIT.Text;
             ExType = 3;
 
         }
@@ -143,7 +141,7 @@ namespace winformsTEST
 
 
             }
-            Form1.instance.secPanel.Controls.Remove(this);
+            MainForm.instance.secPanel.Controls.Remove(this);
         }
 
         private void changeByType_Paint(object sender, PaintEventArgs e)

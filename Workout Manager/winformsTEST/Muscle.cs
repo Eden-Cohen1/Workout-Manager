@@ -9,7 +9,7 @@ namespace MUSCLE
     [Serializable]
     public class Muscle
     {
-        string _name;
+        public string _name;
 
         public Muscle()
         {

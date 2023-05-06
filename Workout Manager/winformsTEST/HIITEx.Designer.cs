@@ -69,11 +69,11 @@ namespace winformsTEST
             this.intenseDropDown.Controls.Add(this.Easy);
             this.intenseDropDown.Controls.Add(this.Medium);
             this.intenseDropDown.Controls.Add(this.Hard);
-            this.intenseDropDown.Location = new System.Drawing.Point(203, 260);
+            this.intenseDropDown.Location = new System.Drawing.Point(205, 258);
             this.intenseDropDown.MaximumSize = new System.Drawing.Size(237, 140);
             this.intenseDropDown.MinimumSize = new System.Drawing.Size(237, 33);
             this.intenseDropDown.Name = "intenseDropDown";
-            this.intenseDropDown.Size = new System.Drawing.Size(237, 33);
+            this.intenseDropDown.Size = new System.Drawing.Size(237, 35);
             this.intenseDropDown.TabIndex = 25;
             // 
             // intensityDropDown
@@ -82,6 +82,7 @@ namespace winformsTEST
             this.intensityDropDown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("intensityDropDown.BackgroundImage")));
             this.intensityDropDown.Dock = System.Windows.Forms.DockStyle.Top;
             this.intensityDropDown.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.intensityDropDown.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.intensityDropDown.Image = ((System.Drawing.Image)(resources.GetObject("intensityDropDown.Image")));
             this.intensityDropDown.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.intensityDropDown.Location = new System.Drawing.Point(3, 3);
@@ -96,6 +97,7 @@ namespace winformsTEST
             // 
             this.Easy.Dock = System.Windows.Forms.DockStyle.Top;
             this.Easy.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Easy.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Easy.Location = new System.Drawing.Point(3, 39);
             this.Easy.Name = "Easy";
             this.Easy.Size = new System.Drawing.Size(230, 30);
@@ -108,6 +110,7 @@ namespace winformsTEST
             // 
             this.Medium.Dock = System.Windows.Forms.DockStyle.Top;
             this.Medium.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Medium.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Medium.Location = new System.Drawing.Point(3, 75);
             this.Medium.Name = "Medium";
             this.Medium.Size = new System.Drawing.Size(230, 30);
@@ -153,7 +156,7 @@ namespace winformsTEST
             // Calories
             // 
             this.Calories.AutoSize = true;
-            this.Calories.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
+            this.Calories.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.Calories.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Calories.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Calories.Location = new System.Drawing.Point(18, 40);
@@ -179,7 +182,7 @@ namespace winformsTEST
             // restTime
             // 
             this.restTime.AutoSize = true;
-            this.restTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
+            this.restTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.restTime.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.restTime.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.restTime.Location = new System.Drawing.Point(18, 178);
@@ -192,7 +195,7 @@ namespace winformsTEST
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.Controls.Add(this.restTextBox);
             this.Controls.Add(this.restTime);
             this.Controls.Add(this.calTextBox);

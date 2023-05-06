@@ -40,6 +40,7 @@ namespace winformsTEST
             this.typeCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.descripCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ViewWorkout = new System.Windows.Forms.Button();
+            this.deleteBTN = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // myWlabel
@@ -102,8 +103,8 @@ namespace winformsTEST
             this.myWorkoutsList.Activation = System.Windows.Forms.ItemActivation.TwoClick;
             this.myWorkoutsList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.myWorkoutsList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.durationCol,
             this.nameCol,
+            this.durationCol,
             this.typeCol,
             this.descripCol});
             this.myWorkoutsList.Cursor = System.Windows.Forms.Cursors.Default;
@@ -126,17 +127,18 @@ namespace winformsTEST
             // 
             // nameCol
             // 
-            this.nameCol.DisplayIndex = 0;
             this.nameCol.Text = "Workout Name";
             this.nameCol.Width = 230;
             // 
             // typeCol
             // 
+            this.typeCol.DisplayIndex = 2;
             this.typeCol.Text = "Type";
             this.typeCol.Width = 230;
             // 
             // descripCol
             // 
+            this.descripCol.DisplayIndex = 3;
             this.descripCol.Text = "Description";
             this.descripCol.Width = 230;
             // 
@@ -154,11 +156,26 @@ namespace winformsTEST
             this.ViewWorkout.UseVisualStyleBackColor = false;
             this.ViewWorkout.Click += new System.EventHandler(this.ViewWorkout_Click);
             // 
+            // deleteBTN
+            // 
+            this.deleteBTN.BackColor = System.Drawing.Color.RoyalBlue;
+            this.deleteBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.deleteBTN.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteBTN.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.deleteBTN.Location = new System.Drawing.Point(219, 586);
+            this.deleteBTN.Name = "deleteBTN";
+            this.deleteBTN.Size = new System.Drawing.Size(147, 40);
+            this.deleteBTN.TabIndex = 30;
+            this.deleteBTN.Text = "Delete Workout";
+            this.deleteBTN.UseVisualStyleBackColor = false;
+            this.deleteBTN.Click += new System.EventHandler(this.deleteBTN_Click);
+            // 
             // myWorkouts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.Controls.Add(this.deleteBTN);
             this.Controls.Add(this.ViewWorkout);
             this.Controls.Add(this.myWorkoutsList);
             this.Controls.Add(this.label4);
@@ -168,7 +185,6 @@ namespace winformsTEST
             this.Controls.Add(this.myWlabel);
             this.Name = "myWorkouts";
             this.Size = new System.Drawing.Size(1074, 692);
-            this.Load += new System.EventHandler(this.myWorkouts_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +202,6 @@ namespace winformsTEST
         public System.Windows.Forms.Label myWlabel;
         public System.Windows.Forms.ListView myWorkoutsList;
         private System.Windows.Forms.Button ViewWorkout;
+        private System.Windows.Forms.Button deleteBTN;
     }
 }

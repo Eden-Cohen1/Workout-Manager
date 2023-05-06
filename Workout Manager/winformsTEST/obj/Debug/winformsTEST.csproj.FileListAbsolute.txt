@@ -18,7 +18,6 @@ C:\Users\eden7\Source\Repos\Workout-Manager\Workout Manager\winformsTEST\obj\Deb
 C:\Users\eden7\Source\Repos\Workout-Manager\Workout Manager\winformsTEST\obj\Debug\winformsTEST.AddEx.resources
 C:\Users\eden7\Source\Repos\Workout-Manager\Workout Manager\winformsTEST\obj\Debug\winformsTEST.AddWorkout.resources
 C:\Users\eden7\Source\Repos\Workout-Manager\Workout Manager\winformsTEST\obj\Debug\winformsTEST.EnduranceEx.resources
-C:\Users\eden7\Source\Repos\Workout-Manager\Workout Manager\winformsTEST\obj\Debug\winformsTEST.Form1.resources
 C:\Users\eden7\Source\Repos\Workout-Manager\Workout Manager\winformsTEST\obj\Debug\winformsTEST.myWorkouts.resources
 C:\Users\eden7\Source\Repos\Workout-Manager\Workout Manager\winformsTEST\obj\Debug\winformsTEST.Properties.Resources.resources
 C:\Users\eden7\Source\Repos\Workout-Manager\Workout Manager\winformsTEST\obj\Debug\winformsTEST.HIITEx.resources
@@ -36,3 +35,5 @@ C:\Users\eden7\source\repos\Workout-Manager\Workout Manager\winformsTEST\bin\Deb
 C:\Users\eden7\source\repos\Workout-Manager\Workout Manager\winformsTEST\bin\Debug\CircularProgressBar.xml
 C:\Users\eden7\source\repos\Workout-Manager\Workout Manager\winformsTEST\bin\Debug\WinFormAnimation.xml
 C:\Users\eden7\source\repos\Workout-Manager\Workout Manager\winformsTEST\obj\Debug\winformsTEST.csproj.CopyComplete
+C:\Users\eden7\source\repos\Workout-Manager\Workout Manager\winformsTEST\obj\Debug\winformsTEST.MainForm.resources
+C:\Users\eden7\source\repos\Workout-Manager\Workout Manager\winformsTEST\obj\Debug\winformsTEST.EditEx.resources

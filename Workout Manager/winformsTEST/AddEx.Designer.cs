@@ -34,7 +34,6 @@ namespace winformsTEST
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.muscleTextBox = new System.Windows.Forms.TextBox();
             this.typeDropDown = new System.Windows.Forms.FlowLayoutPanel();
-            this.dropDown = new System.Windows.Forms.Button();
             this.Stamina = new System.Windows.Forms.Button();
             this.Strenght = new System.Windows.Forms.Button();
             this.HIIT = new System.Windows.Forms.Button();
@@ -46,6 +45,7 @@ namespace winformsTEST
             this.changeByType = new System.Windows.Forms.Panel();
             this.doneAddingEx = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.dropDown = new System.Windows.Forms.Button();
             this.typeDropDown.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,25 +77,6 @@ namespace winformsTEST
             this.typeDropDown.Name = "typeDropDown";
             this.typeDropDown.Size = new System.Drawing.Size(237, 35);
             this.typeDropDown.TabIndex = 19;
-            // 
-            // dropDown
-            // 
-            this.dropDown.BackColor = System.Drawing.SystemColors.Control;
-            this.dropDown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dropDown.BackgroundImage")));
-            this.dropDown.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dropDown.FlatAppearance.BorderSize = 0;
-            this.dropDown.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.dropDown.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dropDown.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dropDown.Image = ((System.Drawing.Image)(resources.GetObject("dropDown.Image")));
-            this.dropDown.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.dropDown.Location = new System.Drawing.Point(3, 3);
-            this.dropDown.Name = "dropDown";
-            this.dropDown.Size = new System.Drawing.Size(230, 30);
-            this.dropDown.TabIndex = 12;
-            this.dropDown.Text = "ADD EXERCISE";
-            this.dropDown.UseVisualStyleBackColor = false;
-            this.dropDown.Click += new System.EventHandler(this.dropDown_Click);
             // 
             // Stamina
             // 
@@ -205,13 +186,32 @@ namespace winformsTEST
             this.doneAddingEx.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.doneAddingEx.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.doneAddingEx.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.doneAddingEx.Location = new System.Drawing.Point(31, 466);
+            this.doneAddingEx.Location = new System.Drawing.Point(29, 466);
             this.doneAddingEx.Name = "doneAddingEx";
             this.doneAddingEx.Size = new System.Drawing.Size(131, 40);
             this.doneAddingEx.TabIndex = 24;
             this.doneAddingEx.Text = "Done";
             this.doneAddingEx.UseVisualStyleBackColor = false;
             this.doneAddingEx.Click += new System.EventHandler(this.doneAddingEx_Click);
+            // 
+            // dropDown
+            // 
+            this.dropDown.BackColor = System.Drawing.SystemColors.Control;
+            this.dropDown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dropDown.BackgroundImage")));
+            this.dropDown.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dropDown.FlatAppearance.BorderSize = 0;
+            this.dropDown.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.dropDown.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dropDown.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dropDown.Image = ((System.Drawing.Image)(resources.GetObject("dropDown.Image")));
+            this.dropDown.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.dropDown.Location = new System.Drawing.Point(3, 3);
+            this.dropDown.Name = "dropDown";
+            this.dropDown.Size = new System.Drawing.Size(230, 30);
+            this.dropDown.TabIndex = 12;
+            this.dropDown.Text = "ADD EXERCISE";
+            this.dropDown.UseVisualStyleBackColor = false;
+            this.dropDown.Click += new System.EventHandler(this.dropDown_Click);
             // 
             // AddEx
             // 

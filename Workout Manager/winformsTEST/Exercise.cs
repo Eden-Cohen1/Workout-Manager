@@ -16,22 +16,25 @@ namespace EXERCISE
         public string _name { get; set; }
         public Muscle _muscle { get; set; }
 
-        public Exercise()
+        public  Exercise()
         {
             this._name = "No Name";
             this._muscle = new Muscle();
         }
 
-        public abstract double CalcCalories();
+        public virtual double CalcCalories()
+        {
+            return 0.0;
+        }
 
     }
     [Serializable]
     public class StrenghtExercise : Exercise
     {
-        double _weight { get; set; }
-        int _reps { get; set; }
-        int _sets { get; set; }
-        double _caloriesPerRep { get; set; }
+        public double _weight { get; set; }
+        public int _reps { get; set; }
+        public int _sets { get; set; }
+        public double _caloriesPerRep { get; set; }
 
         public StrenghtExercise()
         {
@@ -57,7 +60,7 @@ namespace EXERCISE
         }
     }
     [Serializable]
-    class StaminaExercise : Exercise
+    public class StaminaExercise : Exercise
     {
         protected int _duration { get; set; }
         protected double _caloriesPerMin { get; set; }
@@ -73,11 +76,11 @@ namespace EXERCISE
         }
     }
     [Serializable]
-    class HIITExercise : StaminaExercise
+    public class HIITExercise : StaminaExercise
     {
-        int _intervalCount { get; set; }
-        double _restTime { get; set; }
-         int _intensity { get; set; }
+        public int _intervalCount { get; set; }
+        public double _restTime { get; set; }
+        public int _intensity { get; set; }
 
         int _caloriesPerInterval { get; set; }
 
@@ -105,8 +108,8 @@ namespace EXERCISE
     [Serializable]
     class EnduranceExercise : StaminaExercise
     {
-        double _distance { get; set; }
-        double _avragePace { get; set; }
+        public double _distance { get; set; }
+        public double _avragePace { get; set; }
 
         public EnduranceExercise()
         {
@@ -117,10 +120,11 @@ namespace EXERCISE
         public EnduranceExercise(double distance, double pace, string name, string muscle)
         {
             type = 3;
-            _distance = 0;
-            _avragePace = 0;
+            _distance = distance;
+            _avragePace = pace;
             _name = name;
             _muscle = new Muscle(muscle);
+            
         }
         public override double CalcCalories()
         {

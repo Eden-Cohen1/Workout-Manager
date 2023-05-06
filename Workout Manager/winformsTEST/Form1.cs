@@ -9,66 +9,35 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MUSCLE;
 using EXERCISE;
+using System.Runtime.Serialization;//!!!!!!
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 namespace winformsTEST
 {
-/*    public static List<Workout>
-*/
-    public partial class Form1 : Form
+
+    public partial class MainForm : Form
     {
-        public static Form1 instance;
+        public static MainForm instance;
         public static myWorkouts screen;
         public static AddWorkout screen2;
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
-            /*            this.WindowState = FormWindowState.Normal;
-                        this.Size = new Size(1150, 800);*/
-            /*            this.WindowState = FormWindowState.Maximized;
-*/
-
             screen = new myWorkouts();
             screen2 = new AddWorkout();
             secPanel.AutoSize = true;
-            
             instance = this;
-        }
-        public Form1(string name)
-        {
-            InitializeComponent();
-        }
-
-        private void newWorkout_Click(object sender, EventArgs e)
-        {
-            secPanel.Controls.Add(screen2);
-            screen2.BringToFront();
-            screen2.Size = secPanel.Size;
-
-        }
-
-        private void Home_Click(object sender, EventArgs e)
-        {
-            secPanel.Controls.Clear();
-            Form1 newform = new Form1();
-            secPanel.Controls.Add(newform);
-            secPanel.BackColor = Color.White;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-/*            myWorkouts screen = new myWorkouts();
-*/            secPanel.Controls.Add(screen);
-            screen.BringToFront();
-            screen.Size = this.Size;
+            //loading workout list;
             foreach (Workout workout in AddWorkout.workout_list)
             {
                 string type;
-                if(workout.type == 1)
+                if (workout.type == 1)
                 {
                     type = "Strenght Workout";
                 }
-                else if(workout.type == 2)
+                else if (workout.type == 2)
                 {
                     type = "Cardio Workout";
 
@@ -80,26 +49,47 @@ namespace winformsTEST
                 string name = workout._workoutName;
                 string description = workout._Description;
                 string duration = workout._Duration;
-                string[] listnames = { name, duration, type, description };
+                string[] listnames = { name, duration + " minutes", type, description };
                 var listviewitem = new ListViewItem(listnames);
                 myWorkouts.instance.myWorkoutsList.Items.Add(listviewitem);
             }
         }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
+        public MainForm(string name)
         {
-            secPanel.Controls.Add(background);
-            secPanel.Controls.Add(Home);
-            background.BringToFront();
-            Home.BringToFront();
+            InitializeComponent();
         }
+
+        private void newWorkout_Click(object sender, EventArgs e)
+        {
+            secPanel.Controls.Add(screen2);
+            screen2.BringToFront();
+            screen2.Size = secPanel.Size;
+            AddWorkout.instance.workoutAdded.Visible = false;
+            Headline.Text = "ADDING A NEW WORKOUT ";
+            Headline.BackColor = Color.FromName("RoyalBlue");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            secPanel.Controls.Add(screen);
+            screen.BringToFront();
+            screen.Size = this.Size;
+            Headline.Text = "MY WORKOUTS";
+            Headline.BackColor = Color.FromName("RoyalBlue");
+        }
+
 
         private void button5_Click(object sender, EventArgs e)
         {
             secPanel.Controls.Add(background);
-            secPanel.Controls.Add(Home);
             background.BringToFront();
-            Home.BringToFront();
+            Headline.Text = "HOME";
+            Headline.BackColor = Color.FromArgb(28, 26, 33);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

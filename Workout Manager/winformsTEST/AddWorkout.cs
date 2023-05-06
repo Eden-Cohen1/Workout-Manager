@@ -16,42 +16,82 @@ namespace winformsTEST
     public partial class AddWorkout : UserControl
     {
         public static List<Workout> workout_list = new List<Workout>();
-
+        int workout_flag = 0;
         private bool isCollapsed; //for the dropdown menu
         public static AddWorkout instance;
         public AddWorkout()
         {
+
+            workout_flag = 0;
             InitializeComponent();
             instance = this;
-            
 
         }
         private void button1_Click(object sender, EventArgs e)
         {
+
+            workoutAdded.Enabled = true;
+            workoutAdded.Visible = true;
+            workout_flag = 0;
+
+            foreach (Control control in this.Controls)
+            {
+                if(control is TextBox)
+                {
+                    control.Text = "" ;
+                }
+            }
+            string type;
+            Workout last_workout = workout_list.ElementAt(workout_list.Count - 1);
+            if (last_workout.type == 1)
+            {
+                type = "Strenght Workout";
+            }
+            else if (last_workout.type == 2)
+            {
+                type = "Cardio Workout";
+
+            }
+            else
+            {
+                type = "NO TYPE";
+            }
+            string name = last_workout._workoutName;
+            string description = last_workout._Description;
+            string duration = last_workout._Duration;
+            string[] listnames = { name, duration, type, description };
+            var listviewitem = new ListViewItem(listnames);
+            myWorkouts.instance.myWorkoutsList.Items.Add(listviewitem);
+            //UPDATE:
             IFormatter formatter = new BinaryFormatter();
             Stream stream = new FileStream("main_file", FileMode.Create, FileAccess.Write, FileShare.None);
             formatter.Serialize(stream, workout_list);
-            workoutAdded.Enabled = true;
-            workoutAdded.Visible = true;
+            stream.Close();
+            ExList.Items.Clear();
+            muscleList.Items.Clear();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
             AddEx screen = new AddEx();
-            Form1.instance.secPanel.Controls.Add(screen);
+            MainForm.instance.secPanel.Controls.Add(screen);
             screen.BringToFront();
 
-            if(dropDown.Text == "STRENGHT WORKOUT")
+            if(dropDown.Text == "STRENGHT WORKOUT" && workout_flag == 0)
             {
                 StrenghtWorkout workout = new StrenghtWorkout(nameTextBox.Text, DescriptionTextBox.Text, DurationTextBox.Text);
                 workout_list.Add(workout); // creating a new workout as the exercise button is clicked, and adding it to the workout list
+                workout_flag = 1;
             }
-            else
+            else if(workout_flag == 0)
             {
                 CardioWorkout workout = new CardioWorkout(nameTextBox.Text, DescriptionTextBox.Text, DurationTextBox.Text);
                 workout_list.Add(workout); // creating a new workout as the exercise button is clicked, and adding it to the workout list
+                workout_flag = 1;
+
             }
+            MainForm.instance.Headline.Text = "ADDING A NEW EXERCISE";
+            MainForm.instance.Headline.BackColor = Color.FromName("RoyalBlue");
         }
 
         private void timer1_Tick(object sender, EventArgs e)

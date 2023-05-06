@@ -176,7 +176,7 @@ namespace winformsTEST
             this.typeDropDown.MaximumSize = new System.Drawing.Size(237, 109);
             this.typeDropDown.MinimumSize = new System.Drawing.Size(237, 33);
             this.typeDropDown.Name = "typeDropDown";
-            this.typeDropDown.Size = new System.Drawing.Size(237, 109);
+            this.typeDropDown.Size = new System.Drawing.Size(237, 33);
             this.typeDropDown.TabIndex = 21;
             // 
             // dropDown
@@ -317,7 +317,6 @@ namespace winformsTEST
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.TextBox DescriptionTextBox;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label workoutAdded;
         private System.Windows.Forms.Button addExercise;
         private System.Windows.Forms.Label headline;
         private System.Windows.Forms.TextBox DurationTextBox;
@@ -330,5 +329,6 @@ namespace winformsTEST
         public System.Windows.Forms.ListBox ExList;
         private System.Windows.Forms.Label Exlistlabel;
         public System.Windows.Forms.ListBox muscleList;
+        public System.Windows.Forms.Label workoutAdded;
     }
 }

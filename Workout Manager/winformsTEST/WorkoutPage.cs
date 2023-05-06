@@ -7,23 +7,112 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EXERCISE;
+using System.Runtime.Serialization;//!!!!!!
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 namespace winformsTEST
 {
     public partial class WorkoutPage : UserControl
     {
+        public static WorkoutPage instance;
+        public static Workout currWorkout;
+        public static Exercise currExercise;
         public WorkoutPage()
         {
             InitializeComponent();
+            instance = this;
+        }
+        private void deleteBTN_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem item in ExerciseList.Items)
+            {
+                if (item.Selected == true)
+                {
+                    foreach (Exercise ex in currWorkout._ExerciseList)
+                    {
+                        if (ex._name == item.SubItems[0].Text)
+                        {
+                            currWorkout._ExerciseList.Remove(ex);
+                            ExerciseList.Items.Remove(item);
+                            break;
+                        }
+                    }
+
+                }
+            }
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("main_file", FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, AddWorkout.workout_list);
+            stream.Close();
+
         }
 
-        private void WorkoutPage_Load(object sender, EventArgs e)
+        private void editBTN_Click(object sender, EventArgs e)
         {
+            foreach (ListViewItem item in ExerciseList.Items)
+            {
+                if (item.Selected == true)
+                {
+                    foreach (Exercise ex in currWorkout._ExerciseList)
+                    {
+                        if (ex._name == item.SubItems[0].Text)
+                        {
+                            EditEx edit_window = new EditEx();
+                            if (ex.type == 1)
+                            {
+                                edit_window.restTextBox.Enabled = false;
+                                edit_window.distanceTextBox.Enabled = false;
+                                edit_window.PaceTextBox.Enabled = false;
+                                edit_window.intenseDropDown.Enabled = false;
 
-        }
+                                edit_window.nameTextBox.Text = item.SubItems[0].Text;
+                                edit_window.muscleTextBox.Text = item.SubItems[1].Text;
+                                edit_window.setsTextBox.Text = item.SubItems[2].Text;
+                                edit_window.repTextBox.Text = item.SubItems[3].Text;
+                                edit_window.weightTextBox.Text = item.SubItems[4].Text;
+                                edit_window.restTextBox.Text = item.SubItems[5].Text.Split(' ')[0];
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+
+                            }
+                            else if (ex.type == 2)
+                            {
+                                edit_window.repTextBox.Enabled = false;
+                                edit_window.weightTextBox.Enabled = false;
+                                edit_window.distanceTextBox.Enabled = false;
+                                edit_window.PaceTextBox.Enabled = false;
+
+                                edit_window.nameTextBox.Text = item.SubItems[0].Text;
+                                edit_window.muscleTextBox.Text = item.SubItems[1].Text;
+                                edit_window.setsTextBox.Text = item.SubItems[2].Text;
+                                edit_window.restTextBox.Text = item.SubItems[5].Text.Split(' ')[0];
+                            }
+                            else
+                            {
+                                edit_window.repTextBox.Enabled = false;
+                                edit_window.setsTextBox.Enabled = false;
+                                edit_window.weightTextBox.Enabled = false;
+                                edit_window.intenseDropDown.Enabled = false;
+
+                                edit_window.nameTextBox.Text = item.SubItems[0].Text;
+                                edit_window.muscleTextBox.Text = item.SubItems[1].Text;
+                                edit_window.distanceTextBox.Text = item.SubItems[6].Text;
+                                edit_window.restTextBox.Text = item.SubItems[7].Text.Split(' ')[0];
+                            }
+                            currExercise =ex;
+                            edit_window.ShowDialog();
+
+                        }
+                    }
+                }
+
+
+            }
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("main_file", FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, AddWorkout.workout_list);
+            stream.Close();
         }
     }
 }
