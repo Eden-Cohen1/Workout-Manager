@@ -36,7 +36,7 @@ namespace winformsTEST
             this.Duration = new System.Windows.Forms.Label();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.DescriptionTextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Add_Workout = new System.Windows.Forms.Button();
             this.workoutAdded = new System.Windows.Forms.Label();
             this.addExercise = new System.Windows.Forms.Button();
             this.headline = new System.Windows.Forms.Label();
@@ -93,7 +93,7 @@ namespace winformsTEST
             this.nameTextBox.Location = new System.Drawing.Point(222, 151);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(217, 36);
-            this.nameTextBox.TabIndex = 4;
+            this.nameTextBox.TabIndex = 1;
             // 
             // DescriptionTextBox
             // 
@@ -102,28 +102,28 @@ namespace winformsTEST
             this.DescriptionTextBox.Multiline = true;
             this.DescriptionTextBox.Name = "DescriptionTextBox";
             this.DescriptionTextBox.Size = new System.Drawing.Size(217, 95);
-            this.DescriptionTextBox.TabIndex = 6;
+            this.DescriptionTextBox.TabIndex = 3;
             // 
-            // button1
+            // Add_Workout
             // 
-            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(16, 557);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 40);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "DONE";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Add_Workout.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Add_Workout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Add_Workout.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add_Workout.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Add_Workout.Location = new System.Drawing.Point(16, 557);
+            this.Add_Workout.Name = "Add_Workout";
+            this.Add_Workout.Size = new System.Drawing.Size(173, 40);
+            this.Add_Workout.TabIndex = 7;
+            this.Add_Workout.Text = "FINISH AND ADD";
+            this.Add_Workout.UseVisualStyleBackColor = false;
+            this.Add_Workout.Click += new System.EventHandler(this.Add_workout_Click);
             // 
             // workoutAdded
             // 
             this.workoutAdded.AutoSize = true;
             this.workoutAdded.Enabled = false;
             this.workoutAdded.Font = new System.Drawing.Font("Segoe Print", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.workoutAdded.ForeColor = System.Drawing.Color.DarkRed;
+            this.workoutAdded.ForeColor = System.Drawing.Color.Lime;
             this.workoutAdded.Location = new System.Drawing.Point(0, 624);
             this.workoutAdded.Name = "workoutAdded";
             this.workoutAdded.Size = new System.Drawing.Size(201, 33);
@@ -140,10 +140,10 @@ namespace winformsTEST
             this.addExercise.Location = new System.Drawing.Point(575, 134);
             this.addExercise.Name = "addExercise";
             this.addExercise.Size = new System.Drawing.Size(180, 51);
-            this.addExercise.TabIndex = 11;
+            this.addExercise.TabIndex = 5;
             this.addExercise.Text = "ADD EXERCISE";
             this.addExercise.UseVisualStyleBackColor = false;
-            this.addExercise.Click += new System.EventHandler(this.button2_Click);
+            this.addExercise.Click += new System.EventHandler(this.Add_New_Ex_Click);
             // 
             // headline
             // 
@@ -165,7 +165,8 @@ namespace winformsTEST
             this.DurationTextBox.Location = new System.Drawing.Point(222, 222);
             this.DurationTextBox.Name = "DurationTextBox";
             this.DurationTextBox.Size = new System.Drawing.Size(217, 36);
-            this.DurationTextBox.TabIndex = 13;
+            this.DurationTextBox.TabIndex = 2;
+            this.DurationTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DurationTextBox_KeyPress);
             // 
             // typeDropDown
             // 
@@ -192,7 +193,7 @@ namespace winformsTEST
             this.dropDown.Location = new System.Drawing.Point(3, 3);
             this.dropDown.Name = "dropDown";
             this.dropDown.Size = new System.Drawing.Size(230, 30);
-            this.dropDown.TabIndex = 12;
+            this.dropDown.TabIndex = 4;
             this.dropDown.Text = "CHOOSE A TYPE";
             this.dropDown.UseVisualStyleBackColor = false;
             this.dropDown.Click += new System.EventHandler(this.dropDown_Click);
@@ -251,7 +252,7 @@ namespace winformsTEST
             "EXERCISE NAME"});
             this.ExList.Location = new System.Drawing.Point(694, 211);
             this.ExList.Name = "ExList";
-            this.ExList.Size = new System.Drawing.Size(217, 228);
+            this.ExList.Size = new System.Drawing.Size(217, 200);
             this.ExList.TabIndex = 23;
             // 
             // Exlistlabel
@@ -278,7 +279,7 @@ namespace winformsTEST
             "MUSCLE"});
             this.muscleList.Location = new System.Drawing.Point(575, 211);
             this.muscleList.Name = "muscleList";
-            this.muscleList.Size = new System.Drawing.Size(115, 228);
+            this.muscleList.Size = new System.Drawing.Size(115, 200);
             this.muscleList.TabIndex = 25;
             // 
             // AddWorkout
@@ -295,7 +296,7 @@ namespace winformsTEST
             this.Controls.Add(this.headline);
             this.Controls.Add(this.addExercise);
             this.Controls.Add(this.workoutAdded);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Add_Workout);
             this.Controls.Add(this.DescriptionTextBox);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.Duration);
@@ -303,7 +304,6 @@ namespace winformsTEST
             this.Controls.Add(this.label1);
             this.Name = "AddWorkout";
             this.Size = new System.Drawing.Size(995, 755);
-            this.Load += new System.EventHandler(this.AddWorkout_Load);
             this.typeDropDown.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -316,7 +316,7 @@ namespace winformsTEST
         private System.Windows.Forms.Label Duration;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.TextBox DescriptionTextBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Add_Workout;
         private System.Windows.Forms.Button addExercise;
         private System.Windows.Forms.Label headline;
         private System.Windows.Forms.TextBox DurationTextBox;

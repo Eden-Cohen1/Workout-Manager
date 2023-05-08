@@ -35,8 +35,6 @@ namespace winformsTEST
             this.Sets = new System.Windows.Forms.Label();
             this.weight = new System.Windows.Forms.Label();
             this.setsTextBox = new System.Windows.Forms.TextBox();
-            this.calTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // weightTextBox
@@ -45,7 +43,8 @@ namespace winformsTEST
             this.weightTextBox.Location = new System.Drawing.Point(238, 147);
             this.weightTextBox.Name = "weightTextBox";
             this.weightTextBox.Size = new System.Drawing.Size(173, 36);
-            this.weightTextBox.TabIndex = 33;
+            this.weightTextBox.TabIndex = 34;
+            this.weightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.weightTextBox_KeyPress);
             // 
             // repTextBox
             // 
@@ -54,6 +53,7 @@ namespace winformsTEST
             this.repTextBox.Name = "repTextBox";
             this.repTextBox.Size = new System.Drawing.Size(173, 36);
             this.repTextBox.TabIndex = 32;
+            this.repTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.repTextBox_KeyPress);
             // 
             // Reps
             // 
@@ -96,35 +96,14 @@ namespace winformsTEST
             this.setsTextBox.Location = new System.Drawing.Point(235, 92);
             this.setsTextBox.Name = "setsTextBox";
             this.setsTextBox.Size = new System.Drawing.Size(173, 36);
-            this.setsTextBox.TabIndex = 34;
-            // 
-            // calTextBox
-            // 
-            this.calTextBox.Font = new System.Drawing.Font("Segoe Print", 12F);
-            this.calTextBox.Location = new System.Drawing.Point(238, 210);
-            this.calTextBox.Name = "calTextBox";
-            this.calTextBox.Size = new System.Drawing.Size(173, 36);
-            this.calTextBox.TabIndex = 35;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.label1.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(28, 213);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 33);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "Calories Per Rep:";
+            this.setsTextBox.TabIndex = 33;
+            this.setsTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.setsTextBox_KeyPress);
             // 
             // StrenghtEx
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.calTextBox);
             this.Controls.Add(this.setsTextBox);
             this.Controls.Add(this.weightTextBox);
             this.Controls.Add(this.repTextBox);
@@ -142,10 +121,8 @@ namespace winformsTEST
         private System.Windows.Forms.Label Reps;
         private System.Windows.Forms.Label Sets;
         private System.Windows.Forms.Label weight;
-        private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox repTextBox;
         public System.Windows.Forms.TextBox setsTextBox;
         public System.Windows.Forms.TextBox weightTextBox;
-        public System.Windows.Forms.TextBox calTextBox;
     }
 }

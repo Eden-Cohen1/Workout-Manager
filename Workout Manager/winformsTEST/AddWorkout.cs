@@ -27,7 +27,7 @@ namespace winformsTEST
             instance = this;
 
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void Add_workout_Click(object sender, EventArgs e)
         {
 
             workoutAdded.Enabled = true;
@@ -71,11 +71,12 @@ namespace winformsTEST
             muscleList.Items.Clear();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Add_New_Ex_Click(object sender, EventArgs e)
         {
             AddEx screen = new AddEx();
             MainForm.instance.secPanel.Controls.Add(screen);
             screen.BringToFront();
+            AddEx.newEx = false;
 
             if(dropDown.Text == "STRENGHT WORKOUT" && workout_flag == 0)
             {
@@ -135,9 +136,12 @@ namespace winformsTEST
             dropDown.Text = CardioW.Text;
         }
 
-        private void AddWorkout_Load(object sender, EventArgs e)
+        private void DurationTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if(!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

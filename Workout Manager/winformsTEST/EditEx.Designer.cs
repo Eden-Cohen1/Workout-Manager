@@ -57,6 +57,7 @@ namespace winformsTEST
             this.SaveChanges = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
             this.Minimize = new System.Windows.Forms.Button();
+            this.EnableSaveBTN = new System.Windows.Forms.Timer(this.components);
             this.intenseDropDown.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +75,7 @@ namespace winformsTEST
             this.muscleTextBox.Location = new System.Drawing.Point(209, 104);
             this.muscleTextBox.Name = "muscleTextBox";
             this.muscleTextBox.Size = new System.Drawing.Size(173, 36);
-            this.muscleTextBox.TabIndex = 24;
+            this.muscleTextBox.TabIndex = 26;
             // 
             // exMuscleLable
             // 
@@ -104,7 +105,8 @@ namespace winformsTEST
             this.restTextBox.Location = new System.Drawing.Point(737, 34);
             this.restTextBox.Name = "restTextBox";
             this.restTextBox.Size = new System.Drawing.Size(173, 36);
-            this.restTextBox.TabIndex = 37;
+            this.restTextBox.TabIndex = 30;
+            this.restTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.restTextBox_KeyPress);
             // 
             // restTime
             // 
@@ -143,7 +145,7 @@ namespace winformsTEST
             this.intensityDropDown.Location = new System.Drawing.Point(3, 3);
             this.intensityDropDown.Name = "intensityDropDown";
             this.intensityDropDown.Size = new System.Drawing.Size(230, 30);
-            this.intensityDropDown.TabIndex = 12;
+            this.intensityDropDown.TabIndex = 31;
             this.intensityDropDown.Text = "Choose Intensity";
             this.intensityDropDown.UseVisualStyleBackColor = false;
             this.intensityDropDown.Click += new System.EventHandler(this.intensityDropDown_Click);
@@ -203,7 +205,8 @@ namespace winformsTEST
             this.setsTextBox.Location = new System.Drawing.Point(209, 266);
             this.setsTextBox.Name = "setsTextBox";
             this.setsTextBox.Size = new System.Drawing.Size(173, 36);
-            this.setsTextBox.TabIndex = 43;
+            this.setsTextBox.TabIndex = 28;
+            this.setsTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.setsTextBox_KeyPress);
             // 
             // weightTextBox
             // 
@@ -211,7 +214,8 @@ namespace winformsTEST
             this.weightTextBox.Location = new System.Drawing.Point(209, 349);
             this.weightTextBox.Name = "weightTextBox";
             this.weightTextBox.Size = new System.Drawing.Size(173, 36);
-            this.weightTextBox.TabIndex = 42;
+            this.weightTextBox.TabIndex = 29;
+            this.weightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.weightTextBox_KeyPress);
             // 
             // repTextBox
             // 
@@ -219,7 +223,8 @@ namespace winformsTEST
             this.repTextBox.Location = new System.Drawing.Point(209, 186);
             this.repTextBox.Name = "repTextBox";
             this.repTextBox.Size = new System.Drawing.Size(173, 36);
-            this.repTextBox.TabIndex = 41;
+            this.repTextBox.TabIndex = 27;
+            this.repTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.repTextBox_KeyPress);
             // 
             // exRepsLable
             // 
@@ -266,7 +271,8 @@ namespace winformsTEST
             this.PaceTextBox.Location = new System.Drawing.Point(794, 337);
             this.PaceTextBox.Name = "PaceTextBox";
             this.PaceTextBox.Size = new System.Drawing.Size(101, 36);
-            this.PaceTextBox.TabIndex = 47;
+            this.PaceTextBox.TabIndex = 33;
+            this.PaceTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PaceTextBox_KeyPress);
             // 
             // distanceTextBox
             // 
@@ -274,7 +280,8 @@ namespace winformsTEST
             this.distanceTextBox.Location = new System.Drawing.Point(794, 274);
             this.distanceTextBox.Name = "distanceTextBox";
             this.distanceTextBox.Size = new System.Drawing.Size(102, 36);
-            this.distanceTextBox.TabIndex = 46;
+            this.distanceTextBox.TabIndex = 32;
+            this.distanceTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.distanceTextBox_KeyPress);
             // 
             // Distance
             // 
@@ -308,6 +315,7 @@ namespace winformsTEST
             this.SaveChanges.Name = "SaveChanges";
             this.SaveChanges.Size = new System.Drawing.Size(147, 40);
             this.SaveChanges.TabIndex = 48;
+            this.SaveChanges.TabStop = false;
             this.SaveChanges.Text = "Save Changes";
             this.SaveChanges.UseVisualStyleBackColor = false;
             this.SaveChanges.Click += new System.EventHandler(this.SaveChanges_Click);
@@ -342,12 +350,17 @@ namespace winformsTEST
             this.Minimize.UseVisualStyleBackColor = true;
             this.Minimize.Click += new System.EventHandler(this.Minimize_Click);
             // 
+            // EnableSaveBTN
+            // 
+            this.EnableSaveBTN.Enabled = true;
+            this.EnableSaveBTN.Interval = 15;
+            // 
             // EditEx
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(1061, 556);
+            this.ClientSize = new System.Drawing.Size(1071, 561);
             this.Controls.Add(this.Minimize);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.SaveChanges);
@@ -371,7 +384,6 @@ namespace winformsTEST
             this.Controls.Add(this.exNameLable);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditEx";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditEx";
             this.intenseDropDown.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -403,8 +415,9 @@ namespace winformsTEST
         public System.Windows.Forms.FlowLayoutPanel intenseDropDown;
         public System.Windows.Forms.TextBox nameTextBox;
         public System.Windows.Forms.TextBox muscleTextBox;
-        private System.Windows.Forms.Button SaveChanges;
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.Button Minimize;
+        private System.Windows.Forms.Timer EnableSaveBTN;
+        public System.Windows.Forms.Button SaveChanges;
     }
 }

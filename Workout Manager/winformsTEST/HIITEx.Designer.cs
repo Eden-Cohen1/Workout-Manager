@@ -31,37 +31,28 @@ namespace winformsTEST
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HIITEx));
-            this.calTextBox = new System.Windows.Forms.TextBox();
             this.intrcountTextBox = new System.Windows.Forms.TextBox();
             this.intenseDropDown = new System.Windows.Forms.FlowLayoutPanel();
-            this.intensityDropDown = new System.Windows.Forms.Button();
             this.Easy = new System.Windows.Forms.Button();
             this.Medium = new System.Windows.Forms.Button();
             this.Hard = new System.Windows.Forms.Button();
             this.numOfIntervals = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Calories = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.restTextBox = new System.Windows.Forms.TextBox();
             this.restTime = new System.Windows.Forms.Label();
+            this.intensityDropDown = new System.Windows.Forms.Button();
             this.intenseDropDown.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // calTextBox
-            // 
-            this.calTextBox.Font = new System.Drawing.Font("Segoe Print", 12F);
-            this.calTextBox.Location = new System.Drawing.Point(242, 37);
-            this.calTextBox.Name = "calTextBox";
-            this.calTextBox.Size = new System.Drawing.Size(173, 36);
-            this.calTextBox.TabIndex = 27;
             // 
             // intrcountTextBox
             // 
             this.intrcountTextBox.Font = new System.Drawing.Font("Segoe Print", 12F);
-            this.intrcountTextBox.Location = new System.Drawing.Point(242, 110);
+            this.intrcountTextBox.Location = new System.Drawing.Point(248, 32);
             this.intrcountTextBox.Name = "intrcountTextBox";
             this.intrcountTextBox.Size = new System.Drawing.Size(173, 36);
             this.intrcountTextBox.TabIndex = 26;
+            this.intrcountTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.intrcountTextBox_KeyPress);
             // 
             // intenseDropDown
             // 
@@ -69,29 +60,12 @@ namespace winformsTEST
             this.intenseDropDown.Controls.Add(this.Easy);
             this.intenseDropDown.Controls.Add(this.Medium);
             this.intenseDropDown.Controls.Add(this.Hard);
-            this.intenseDropDown.Location = new System.Drawing.Point(205, 258);
+            this.intenseDropDown.Location = new System.Drawing.Point(211, 180);
             this.intenseDropDown.MaximumSize = new System.Drawing.Size(237, 140);
             this.intenseDropDown.MinimumSize = new System.Drawing.Size(237, 33);
             this.intenseDropDown.Name = "intenseDropDown";
             this.intenseDropDown.Size = new System.Drawing.Size(237, 35);
             this.intenseDropDown.TabIndex = 25;
-            // 
-            // intensityDropDown
-            // 
-            this.intensityDropDown.BackColor = System.Drawing.SystemColors.Control;
-            this.intensityDropDown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("intensityDropDown.BackgroundImage")));
-            this.intensityDropDown.Dock = System.Windows.Forms.DockStyle.Top;
-            this.intensityDropDown.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.intensityDropDown.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.intensityDropDown.Image = ((System.Drawing.Image)(resources.GetObject("intensityDropDown.Image")));
-            this.intensityDropDown.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.intensityDropDown.Location = new System.Drawing.Point(3, 3);
-            this.intensityDropDown.Name = "intensityDropDown";
-            this.intensityDropDown.Size = new System.Drawing.Size(230, 30);
-            this.intensityDropDown.TabIndex = 12;
-            this.intensityDropDown.Text = "Choose Intensity";
-            this.intensityDropDown.UseVisualStyleBackColor = false;
-            this.intensityDropDown.Click += new System.EventHandler(this.intensityDropDown_Click);
             // 
             // Easy
             // 
@@ -136,7 +110,7 @@ namespace winformsTEST
             this.numOfIntervals.AutoSize = true;
             this.numOfIntervals.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numOfIntervals.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.numOfIntervals.Location = new System.Drawing.Point(18, 113);
+            this.numOfIntervals.Location = new System.Drawing.Point(24, 35);
             this.numOfIntervals.Name = "numOfIntervals";
             this.numOfIntervals.Size = new System.Drawing.Size(218, 33);
             this.numOfIntervals.TabIndex = 24;
@@ -147,24 +121,11 @@ namespace winformsTEST
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(18, 260);
+            this.label1.Location = new System.Drawing.Point(24, 182);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 33);
             this.label1.TabIndex = 23;
             this.label1.Text = "Intensity: ";
-            // 
-            // Calories
-            // 
-            this.Calories.AutoSize = true;
-            this.Calories.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.Calories.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calories.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Calories.Location = new System.Drawing.Point(18, 40);
-            this.Calories.Name = "Calories";
-            this.Calories.Size = new System.Drawing.Size(217, 33);
-            this.Calories.TabIndex = 22;
-            this.Calories.Text = "Calories Per Interval:";
-            this.Calories.Click += new System.EventHandler(this.label2_Click);
             // 
             // timer1
             // 
@@ -174,10 +135,11 @@ namespace winformsTEST
             // restTextBox
             // 
             this.restTextBox.Font = new System.Drawing.Font("Segoe Print", 12F);
-            this.restTextBox.Location = new System.Drawing.Point(242, 175);
+            this.restTextBox.Location = new System.Drawing.Point(248, 97);
             this.restTextBox.Name = "restTextBox";
             this.restTextBox.Size = new System.Drawing.Size(173, 36);
-            this.restTextBox.TabIndex = 29;
+            this.restTextBox.TabIndex = 27;
+            this.restTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.restTextBox_KeyPress);
             // 
             // restTime
             // 
@@ -185,11 +147,28 @@ namespace winformsTEST
             this.restTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.restTime.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.restTime.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.restTime.Location = new System.Drawing.Point(18, 178);
+            this.restTime.Location = new System.Drawing.Point(24, 100);
             this.restTime.Name = "restTime";
             this.restTime.Size = new System.Drawing.Size(146, 33);
             this.restTime.TabIndex = 28;
             this.restTime.Text = "Resting Time:";
+            // 
+            // intensityDropDown
+            // 
+            this.intensityDropDown.BackColor = System.Drawing.SystemColors.Control;
+            this.intensityDropDown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("intensityDropDown.BackgroundImage")));
+            this.intensityDropDown.Dock = System.Windows.Forms.DockStyle.Top;
+            this.intensityDropDown.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.intensityDropDown.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.intensityDropDown.Image = ((System.Drawing.Image)(resources.GetObject("intensityDropDown.Image")));
+            this.intensityDropDown.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.intensityDropDown.Location = new System.Drawing.Point(3, 3);
+            this.intensityDropDown.Name = "intensityDropDown";
+            this.intensityDropDown.Size = new System.Drawing.Size(230, 30);
+            this.intensityDropDown.TabIndex = 12;
+            this.intensityDropDown.Text = "Choose Intensity";
+            this.intensityDropDown.UseVisualStyleBackColor = false;
+            this.intensityDropDown.Click += new System.EventHandler(this.intensityDropDown_Click);
             // 
             // HIITEx
             // 
@@ -198,12 +177,10 @@ namespace winformsTEST
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.Controls.Add(this.restTextBox);
             this.Controls.Add(this.restTime);
-            this.Controls.Add(this.calTextBox);
             this.Controls.Add(this.intrcountTextBox);
             this.Controls.Add(this.intenseDropDown);
             this.Controls.Add(this.numOfIntervals);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Calories);
             this.Name = "HIITEx";
             this.Size = new System.Drawing.Size(456, 316);
             this.intenseDropDown.ResumeLayout(false);
@@ -216,14 +193,12 @@ namespace winformsTEST
         private System.Windows.Forms.FlowLayoutPanel intenseDropDown;
         private System.Windows.Forms.Label numOfIntervals;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label Calories;
         private System.Windows.Forms.Button Hard;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button intensityDropDown;
         private System.Windows.Forms.Button Easy;
         private System.Windows.Forms.Button Medium;
         private System.Windows.Forms.Label restTime;
-        public System.Windows.Forms.TextBox calTextBox;
         public System.Windows.Forms.TextBox intrcountTextBox;
         public System.Windows.Forms.TextBox restTextBox;
     }

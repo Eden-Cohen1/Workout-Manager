@@ -44,13 +44,12 @@ namespace EXERCISE
             _sets = 0;
             _caloriesPerRep = 0;
         }
-        public StrenghtExercise(double weight, int reps, int sets, double cal, string name,string muscle)
+        public StrenghtExercise(double weight, int reps, int sets, string name,string muscle)
         {
             type = 1;
             _weight = weight;
             _reps = reps;
             _sets = sets;
-            _caloriesPerRep = cal;
             _name = name;
             _muscle = new Muscle(muscle);
         }
@@ -82,31 +81,28 @@ namespace EXERCISE
         public double _restTime { get; set; }
         public int _intensity { get; set; }
 
-        int _caloriesPerInterval { get; set; }
-
         public HIITExercise()
         {
             type = 2;
             _intervalCount = 0;
             _restTime = 0;
         }
-        public HIITExercise(int cal, int numOfIntervals, double rest, int intensity,string name, string muscle)
+        public HIITExercise(int numOfIntervals, double rest, int intensity,string name, string muscle)
         {
             type = 2;
             _intervalCount = numOfIntervals;
             _restTime = rest;
             _intensity = intensity;
-            _caloriesPerInterval = cal;
             _name = name;
             _muscle = new Muscle(muscle);
         }
         public override double CalcCalories()
         {
-            return _intervalCount * _caloriesPerInterval * _intensity;
+            return _intervalCount * _intensity;
         }
     }
     [Serializable]
-    class EnduranceExercise : StaminaExercise
+    public class EnduranceExercise : StaminaExercise
     {
         public double _distance { get; set; }
         public double _avragePace { get; set; }

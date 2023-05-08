@@ -37,18 +37,18 @@ namespace winformsTEST
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.MyWorkouts = new System.Windows.Forms.Button();
             this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.AboutUs = new System.Windows.Forms.Button();
+            this.Videos = new System.Windows.Forms.Button();
             this.newWorkout = new System.Windows.Forms.Button();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.Minimize = new System.Windows.Forms.Button();
+            this.Exit = new System.Windows.Forms.Button();
             this.Headline = new System.Windows.Forms.Label();
             this.Muscle1 = new System.Windows.Forms.Label();
             this.secPanel = new System.Windows.Forms.Panel();
             this.background = new System.Windows.Forms.PictureBox();
-            this.Exit = new System.Windows.Forms.Button();
-            this.Minimize = new System.Windows.Forms.Button();
             this.FirstPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -80,10 +80,10 @@ namespace winformsTEST
             this.FirstPanel.Controls.Add(this.pictureBox2);
             this.FirstPanel.Controls.Add(this.pictureBox1);
             this.FirstPanel.Controls.Add(this.panel1);
-            this.FirstPanel.Controls.Add(this.button1);
+            this.FirstPanel.Controls.Add(this.MyWorkouts);
             this.FirstPanel.Controls.Add(this.circularProgressBar1);
-            this.FirstPanel.Controls.Add(this.button3);
-            this.FirstPanel.Controls.Add(this.button2);
+            this.FirstPanel.Controls.Add(this.AboutUs);
+            this.FirstPanel.Controls.Add(this.Videos);
             this.FirstPanel.Controls.Add(this.newWorkout);
             this.FirstPanel.Controls.Add(this.tableLayoutPanel1);
             this.FirstPanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -111,7 +111,7 @@ namespace winformsTEST
             this.button5.Text = "SHAPE SHIFT";
             this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.Home_Click);
             // 
             // pictureBox3
             // 
@@ -147,24 +147,24 @@ namespace winformsTEST
             this.panel1.Size = new System.Drawing.Size(1051, 49);
             this.panel1.TabIndex = 0;
             // 
-            // button1
+            // MyWorkouts
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(139)))), ((int)(((byte)(201)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe Print", 11.875F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(-1, 182);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(233, 85);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "MY WORKOUTS";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.MyWorkouts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.MyWorkouts.FlatAppearance.BorderSize = 0;
+            this.MyWorkouts.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(139)))), ((int)(((byte)(201)))));
+            this.MyWorkouts.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.MyWorkouts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MyWorkouts.Font = new System.Drawing.Font("Segoe Print", 11.875F, System.Drawing.FontStyle.Bold);
+            this.MyWorkouts.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.MyWorkouts.Image = ((System.Drawing.Image)(resources.GetObject("MyWorkouts.Image")));
+            this.MyWorkouts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MyWorkouts.Location = new System.Drawing.Point(-1, 182);
+            this.MyWorkouts.Name = "MyWorkouts";
+            this.MyWorkouts.Size = new System.Drawing.Size(233, 85);
+            this.MyWorkouts.TabIndex = 1;
+            this.MyWorkouts.Text = "MY WORKOUTS";
+            this.MyWorkouts.UseVisualStyleBackColor = false;
+            this.MyWorkouts.Click += new System.EventHandler(this.myWorkouts_Click);
             // 
             // circularProgressBar1
             // 
@@ -199,43 +199,43 @@ namespace winformsTEST
             this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
             this.circularProgressBar1.Value = 68;
             // 
-            // button3
+            // AboutUs
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(139)))), ((int)(((byte)(201)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(-1, 455);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(239, 85);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "ABOUT US";
-            this.button3.UseVisualStyleBackColor = false;
+            this.AboutUs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.AboutUs.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.AboutUs.FlatAppearance.BorderSize = 0;
+            this.AboutUs.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(139)))), ((int)(((byte)(201)))));
+            this.AboutUs.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.AboutUs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AboutUs.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold);
+            this.AboutUs.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.AboutUs.Image = ((System.Drawing.Image)(resources.GetObject("AboutUs.Image")));
+            this.AboutUs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AboutUs.Location = new System.Drawing.Point(-1, 455);
+            this.AboutUs.Name = "AboutUs";
+            this.AboutUs.Size = new System.Drawing.Size(239, 85);
+            this.AboutUs.TabIndex = 17;
+            this.AboutUs.Text = "ABOUT US";
+            this.AboutUs.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // Videos
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(139)))), ((int)(((byte)(201)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(-1, 364);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(233, 85);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "VIDEOS";
-            this.button2.UseVisualStyleBackColor = false;
+            this.Videos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.Videos.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.Videos.FlatAppearance.BorderSize = 0;
+            this.Videos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(139)))), ((int)(((byte)(201)))));
+            this.Videos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.Videos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Videos.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Videos.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Videos.Image = ((System.Drawing.Image)(resources.GetObject("Videos.Image")));
+            this.Videos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Videos.Location = new System.Drawing.Point(-1, 364);
+            this.Videos.Name = "Videos";
+            this.Videos.Size = new System.Drawing.Size(233, 85);
+            this.Videos.TabIndex = 16;
+            this.Videos.Text = "VIDEOS";
+            this.Videos.UseVisualStyleBackColor = false;
             // 
             // newWorkout
             // 
@@ -271,6 +271,36 @@ namespace winformsTEST
             this.topPanel.Size = new System.Drawing.Size(1215, 770);
             this.topPanel.TabIndex = 0;
             // 
+            // Minimize
+            // 
+            this.Minimize.FlatAppearance.BorderSize = 0;
+            this.Minimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Minimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Minimize.Image = ((System.Drawing.Image)(resources.GetObject("Minimize.Image")));
+            this.Minimize.Location = new System.Drawing.Point(1126, 9);
+            this.Minimize.Name = "Minimize";
+            this.Minimize.Size = new System.Drawing.Size(32, 32);
+            this.Minimize.TabIndex = 22;
+            this.Minimize.UseVisualStyleBackColor = true;
+            this.Minimize.Click += new System.EventHandler(this.Minimize_Click);
+            // 
+            // Exit
+            // 
+            this.Exit.BackColor = System.Drawing.Color.Transparent;
+            this.Exit.FlatAppearance.BorderSize = 0;
+            this.Exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Exit.ForeColor = System.Drawing.Color.Transparent;
+            this.Exit.Image = ((System.Drawing.Image)(resources.GetObject("Exit.Image")));
+            this.Exit.Location = new System.Drawing.Point(1164, 9);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(32, 32);
+            this.Exit.TabIndex = 22;
+            this.Exit.UseVisualStyleBackColor = false;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            // 
             // Headline
             // 
             this.Headline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
@@ -283,7 +313,6 @@ namespace winformsTEST
             this.Headline.TabIndex = 21;
             this.Headline.Text = "HOME";
             this.Headline.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Headline.Click += new System.EventHandler(this.label1_Click);
             // 
             // Muscle1
             // 
@@ -314,36 +343,6 @@ namespace winformsTEST
             this.background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.background.TabIndex = 20;
             this.background.TabStop = false;
-            // 
-            // Exit
-            // 
-            this.Exit.BackColor = System.Drawing.Color.Transparent;
-            this.Exit.FlatAppearance.BorderSize = 0;
-            this.Exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Exit.ForeColor = System.Drawing.Color.Transparent;
-            this.Exit.Image = ((System.Drawing.Image)(resources.GetObject("Exit.Image")));
-            this.Exit.Location = new System.Drawing.Point(1178, 9);
-            this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(32, 32);
-            this.Exit.TabIndex = 22;
-            this.Exit.UseVisualStyleBackColor = false;
-            this.Exit.Click += new System.EventHandler(this.Exit_Click);
-            // 
-            // Minimize
-            // 
-            this.Minimize.FlatAppearance.BorderSize = 0;
-            this.Minimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Minimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Minimize.Image = ((System.Drawing.Image)(resources.GetObject("Minimize.Image")));
-            this.Minimize.Location = new System.Drawing.Point(1143, 9);
-            this.Minimize.Name = "Minimize";
-            this.Minimize.Size = new System.Drawing.Size(32, 32);
-            this.Minimize.TabIndex = 22;
-            this.Minimize.UseVisualStyleBackColor = true;
-            this.Minimize.Click += new System.EventHandler(this.Minimize_Click);
             // 
             // MainForm
             // 
@@ -376,9 +375,9 @@ namespace winformsTEST
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel FirstPanel;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button AboutUs;
+        private System.Windows.Forms.Button MyWorkouts;
+        private System.Windows.Forms.Button Videos;
         private System.Windows.Forms.Button newWorkout;
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.Label Muscle1;

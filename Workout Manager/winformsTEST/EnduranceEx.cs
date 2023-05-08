@@ -20,14 +20,20 @@ namespace winformsTEST
             instance = this;
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void distanceTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
-        private void Distance_Click(object sender, EventArgs e)
+        private void PaceTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

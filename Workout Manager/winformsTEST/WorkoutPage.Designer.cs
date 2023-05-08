@@ -45,12 +45,13 @@ namespace winformsTEST
             this.headline = new System.Windows.Forms.Label();
             this.deleteBTN = new System.Windows.Forms.Button();
             this.editBTN = new System.Windows.Forms.Button();
-            this.exerciseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.AddBTN = new System.Windows.Forms.Button();
+            this.exerciseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.exerciseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exerciseBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -156,9 +157,9 @@ namespace winformsTEST
             this.deleteBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.deleteBTN.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteBTN.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.deleteBTN.Location = new System.Drawing.Point(13, 663);
+            this.deleteBTN.Location = new System.Drawing.Point(170, 663);
             this.deleteBTN.Name = "deleteBTN";
-            this.deleteBTN.Size = new System.Drawing.Size(147, 40);
+            this.deleteBTN.Size = new System.Drawing.Size(139, 40);
             this.deleteBTN.TabIndex = 31;
             this.deleteBTN.Text = "Delete Exercise";
             this.deleteBTN.UseVisualStyleBackColor = false;
@@ -170,17 +171,13 @@ namespace winformsTEST
             this.editBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.editBTN.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editBTN.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.editBTN.Location = new System.Drawing.Point(188, 663);
+            this.editBTN.Location = new System.Drawing.Point(324, 663);
             this.editBTN.Name = "editBTN";
-            this.editBTN.Size = new System.Drawing.Size(147, 40);
+            this.editBTN.Size = new System.Drawing.Size(139, 40);
             this.editBTN.TabIndex = 32;
             this.editBTN.Text = "Edit Exercise";
             this.editBTN.UseVisualStyleBackColor = false;
             this.editBTN.Click += new System.EventHandler(this.editBTN_Click);
-            // 
-            // exerciseBindingSource
-            // 
-            this.exerciseBindingSource.DataSource = typeof(EXERCISE.Exercise);
             // 
             // pictureBox1
             // 
@@ -191,11 +188,30 @@ namespace winformsTEST
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 
+            // AddBTN
+            // 
+            this.AddBTN.BackColor = System.Drawing.Color.RoyalBlue;
+            this.AddBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddBTN.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddBTN.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.AddBTN.Location = new System.Drawing.Point(14, 663);
+            this.AddBTN.Name = "AddBTN";
+            this.AddBTN.Size = new System.Drawing.Size(139, 40);
+            this.AddBTN.TabIndex = 34;
+            this.AddBTN.Text = "Add Exercise";
+            this.AddBTN.UseVisualStyleBackColor = false;
+            this.AddBTN.Click += new System.EventHandler(this.Add_Ex_Click);
+            // 
+            // exerciseBindingSource
+            // 
+            this.exerciseBindingSource.DataSource = typeof(EXERCISE.Exercise);
+            // 
             // WorkoutPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.Controls.Add(this.AddBTN);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.editBTN);
             this.Controls.Add(this.deleteBTN);
@@ -204,11 +220,11 @@ namespace winformsTEST
             this.Controls.Add(this.splitContainer1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.Name = "WorkoutPage";
-            this.Size = new System.Drawing.Size(1215, 721);
+            this.Size = new System.Drawing.Size(1199, 709);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.exerciseBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exerciseBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,5 +247,6 @@ namespace winformsTEST
         private System.Windows.Forms.Button deleteBTN;
         private System.Windows.Forms.Button editBTN;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button AddBTN;
     }
 }

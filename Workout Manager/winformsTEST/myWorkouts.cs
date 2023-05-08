@@ -16,8 +16,8 @@ namespace winformsTEST
 {
     public partial class myWorkouts : UserControl
     {
-        string rest = "1:30 minutes";
-        string none = "-------";
+        public static string rest = "1:30 minutes";
+        public static string none = "-------";
         public static myWorkouts instance;
 
         public myWorkouts()

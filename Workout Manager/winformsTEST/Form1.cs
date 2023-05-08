@@ -56,10 +56,6 @@ namespace winformsTEST
                 myWorkouts.instance.myWorkoutsList.Items.Add(listviewitem);
             }
         }
-        public MainForm(string name)
-        {
-            InitializeComponent();
-        }
 
         private void newWorkout_Click(object sender, EventArgs e)
         {
@@ -73,7 +69,7 @@ namespace winformsTEST
             Exit.BackColor = Color.FromName("RoyalBlue");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void myWorkouts_Click(object sender, EventArgs e)
         {
             secPanel.Controls.Add(screen);
             screen.BringToFront();
@@ -86,7 +82,7 @@ namespace winformsTEST
         }
 
 
-        private void button5_Click(object sender, EventArgs e)
+        private void Home_Click(object sender, EventArgs e)
         {
             secPanel.Controls.Add(background);
             background.BringToFront();
@@ -99,9 +95,36 @@ namespace winformsTEST
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        public static void blockBTN(UserControl win, Button btn)
         {
-
+            foreach(TextBox txt in win.Controls)
+            {
+                if (txt.Text.Length == 0)
+                {
+                    btn.Enabled = false;
+                }
+                else
+                {
+                    btn.Enabled = true;
+                }
+            }
+        }
+        public static void blockBTN(Form win, Button btn)
+        {
+            foreach (Control txt in win.Controls)
+            {
+                if (txt is TextBox)
+                {
+                    if (txt.Text.Length == 0)
+                    {
+                        btn.Enabled = false;
+                    }
+                    else
+                    {
+                        btn.Enabled = true;
+                    }
+                }
+            }
         }
 
         private void Exit_Click(object sender, EventArgs e)

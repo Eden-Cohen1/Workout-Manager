@@ -22,6 +22,7 @@ namespace winformsTEST
         public EditEx()
         {
             InitializeComponent();
+            
         }
 
         private void intensityDropDown_Click(object sender, EventArgs e)
@@ -30,7 +31,7 @@ namespace winformsTEST
 
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e) // dropdown manu for intensity
         {
             if (isCollapsed)
             {
@@ -77,30 +78,36 @@ namespace winformsTEST
         {
             WorkoutPage.currExercise._name = nameTextBox.Text;
             WorkoutPage.currExercise._muscle._name = muscleTextBox.Text;
-
+            
             if (WorkoutPage.currExercise is StrenghtExercise)
             {
                 ((StrenghtExercise)WorkoutPage.currExercise)._reps = int.Parse(repTextBox.Text);
                 ((StrenghtExercise)WorkoutPage.currExercise)._sets = int.Parse(setsTextBox.Text);
                 ((StrenghtExercise)WorkoutPage.currExercise)._weight = double.Parse(weightTextBox.Text);
+                AddEx.update_list_Strenght((StrenghtExercise)WorkoutPage.currExercise);
+
 
             }
             else if(WorkoutPage.currExercise is EnduranceExercise)
             {
                 ((EnduranceExercise)WorkoutPage.currExercise)._distance = double.Parse(distanceTextBox.Text);
                 ((EnduranceExercise)WorkoutPage.currExercise)._avragePace = double.Parse(PaceTextBox.Text);
+                AddEx.update_list_Endurance((EnduranceExercise)WorkoutPage.currExercise);
+
             }
             else
             {
                 ((HIITExercise)WorkoutPage.currExercise)._restTime = double.Parse(restTextBox.Text);
                 ((HIITExercise)WorkoutPage.currExercise)._intervalCount = int.Parse(setsTextBox.Text);
                 ((HIITExercise)WorkoutPage.currExercise)._intensity = intansityFlag;
+                AddEx.update_list_HIIT((HIITExercise)WorkoutPage.currExercise);
+
             }
-            WorkoutPage.instance.Refresh();
             this.Close();
 
         }
 
+       
         private void Exit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -109,6 +116,54 @@ namespace winformsTEST
         private void Minimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void repTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void setsTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void weightTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void restTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void distanceTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void PaceTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

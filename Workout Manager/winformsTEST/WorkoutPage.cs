@@ -97,10 +97,12 @@ namespace winformsTEST
 
                                 edit_window.nameTextBox.Text = item.SubItems[0].Text;
                                 edit_window.muscleTextBox.Text = item.SubItems[1].Text;
-                                edit_window.distanceTextBox.Text = item.SubItems[6].Text;
+                                edit_window.PaceTextBox.Text = item.SubItems[7].Text;
+                                edit_window.distanceTextBox.Text = item.SubItems[6].Text.Split(' ')[0];
                                 edit_window.restTextBox.Text = item.SubItems[7].Text.Split(' ')[0];
                             }
                             currExercise =ex;
+                            item.Remove();
                             edit_window.ShowDialog();
 
                         }
@@ -113,6 +115,16 @@ namespace winformsTEST
             Stream stream = new FileStream("main_file", FileMode.Create, FileAccess.Write, FileShare.None);
             formatter.Serialize(stream, AddWorkout.workout_list);
             stream.Close();
+        }
+
+        private void Add_Ex_Click(object sender, EventArgs e)
+        {
+            AddEx screen = new AddEx();
+            MainForm.instance.secPanel.Controls.Add(screen);
+            screen.BringToFront();
+            screen.Dock = DockStyle.Fill;
+            AddEx.newEx = true;
+
         }
     }
 }
