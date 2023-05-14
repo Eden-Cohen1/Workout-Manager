@@ -52,50 +52,50 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddEx.cs">
+    <Compile Include="Forms\AddEx.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AddEx.Designer.cs">
+    <Compile Include="Forms\AddEx.Designer.cs">
       <DependentUpon>AddEx.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddWorkout.cs">
+    <Compile Include="Forms\AddWorkout.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AddWorkout.Designer.cs">
+    <Compile Include="Forms\AddWorkout.Designer.cs">
       <DependentUpon>AddWorkout.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditEx.cs">
+    <Compile Include="Forms\EditEx.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditEx.Designer.cs">
+    <Compile Include="Forms\EditEx.Designer.cs">
       <DependentUpon>EditEx.cs</DependentUpon>
     </Compile>
-    <Compile Include="EnduranceEx.cs">
+    <Compile Include="Small-UserControl\EnduranceEx.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="EnduranceEx.Designer.cs">
+    <Compile Include="Small-UserControl\EnduranceEx.Designer.cs">
       <DependentUpon>EnduranceEx.cs</DependentUpon>
     </Compile>
-    <Compile Include="Exercise.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Class%27s\Exercise.cs" />
+    <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Muscle.cs" />
-    <Compile Include="myWorkouts.cs">
+    <Compile Include="Class%27s\Muscle.cs" />
+    <Compile Include="Forms\myWorkouts.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="myWorkouts.Designer.cs">
+    <Compile Include="Forms\myWorkouts.Designer.cs">
       <DependentUpon>myWorkouts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Class%27s\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="HIITEx.cs">
+    <Compile Include="Small-UserControl\HIITEx.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="HIITEx.Designer.cs">
+    <Compile Include="Small-UserControl\HIITEx.Designer.cs">
       <DependentUpon>HIITEx.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -103,35 +103,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="StrenghtEx.cs">
+    <Compile Include="Small-UserControl\StrenghtEx.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="StrenghtEx.Designer.cs">
+    <Compile Include="Small-UserControl\StrenghtEx.Designer.cs">
       <DependentUpon>StrenghtEx.cs</DependentUpon>
     </Compile>
-    <Compile Include="Workout.cs" />
-    <Compile Include="WorkoutPage.cs">
+    <Compile Include="Class%27s\Workout.cs" />
+    <Compile Include="Forms\WorkoutPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="WorkoutPage.Designer.cs">
+    <Compile Include="Forms\WorkoutPage.Designer.cs">
       <DependentUpon>WorkoutPage.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddEx.resx">
+    <EmbeddedResource Include="Forms\AddEx.resx">
       <DependentUpon>AddEx.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddWorkout.resx">
+    <EmbeddedResource Include="Forms\AddWorkout.resx">
       <DependentUpon>AddWorkout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditEx.resx">
+    <EmbeddedResource Include="Forms\EditEx.resx">
       <DependentUpon>EditEx.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EnduranceEx.resx">
+    <EmbeddedResource Include="Small-UserControl\EnduranceEx.resx">
       <DependentUpon>EnduranceEx.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="myWorkouts.resx">
+    <EmbeddedResource Include="Forms\myWorkouts.resx">
       <DependentUpon>myWorkouts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -139,13 +139,13 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="HIITEx.resx">
+    <EmbeddedResource Include="Small-UserControl\HIITEx.resx">
       <DependentUpon>HIITEx.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StrenghtEx.resx">
+    <EmbeddedResource Include="Small-UserControl\StrenghtEx.resx">
       <DependentUpon>StrenghtEx.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WorkoutPage.resx">
+    <EmbeddedResource Include="Forms\WorkoutPage.resx">
       <DependentUpon>WorkoutPage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

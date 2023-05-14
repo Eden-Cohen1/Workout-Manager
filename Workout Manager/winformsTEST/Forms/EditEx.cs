@@ -118,7 +118,7 @@ namespace winformsTEST
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void repTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void repTextBox_KeyPress(object sender, KeyPressEventArgs e) // disable unnecessary text boxes.
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {

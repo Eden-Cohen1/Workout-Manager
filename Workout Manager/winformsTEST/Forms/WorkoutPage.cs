@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EXERCISE;
-using System.Runtime.Serialization;//!!!!!!
+using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
@@ -42,11 +42,6 @@ namespace winformsTEST
 
                 }
             }
-            IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("main_file", FileMode.Create, FileAccess.Write, FileShare.None);
-            formatter.Serialize(stream, AddWorkout.workout_list);
-            stream.Close();
-
         }
 
         private void editBTN_Click(object sender, EventArgs e)
@@ -108,13 +103,7 @@ namespace winformsTEST
                         }
                     }
                 }
-
-
             }
-            IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("main_file", FileMode.Create, FileAccess.Write, FileShare.None);
-            formatter.Serialize(stream, AddWorkout.workout_list);
-            stream.Close();
         }
 
         private void Add_Ex_Click(object sender, EventArgs e)
