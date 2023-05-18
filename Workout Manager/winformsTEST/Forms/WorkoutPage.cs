@@ -26,6 +26,7 @@ namespace winformsTEST
         }
         private void deleteBTN_Click(object sender, EventArgs e)
         {
+            Mainform.sPlayer.Play();
             foreach (ListViewItem item in ExerciseList.Items)
             {
                 if (item.Selected == true)
@@ -46,6 +47,7 @@ namespace winformsTEST
 
         private void editBTN_Click(object sender, EventArgs e)
         {
+            Mainform.sPlayer.Play();
             foreach (ListViewItem item in ExerciseList.Items)
             {
                 if (item.Selected == true)
@@ -108,6 +110,7 @@ namespace winformsTEST
 
         private void Add_Ex_Click(object sender, EventArgs e)
         {
+            Mainform.sPlayer.Play();
             AddEx screen = new AddEx();
             Mainform.instance.secPanel.Controls.Add(screen);
             screen.BringToFront();

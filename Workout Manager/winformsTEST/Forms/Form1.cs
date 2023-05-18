@@ -23,13 +23,13 @@ namespace winformsTEST
         public static Mainform instance;
         public static myWorkouts screen;
         public static AddWorkout screen2;
-        SoundPlayer sPlayer = new SoundPlayer(@"C:\Users\eden7\source\repos\switch-93378.mp3");
-
-        /*        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        */
+        public static SoundPlayer sPlayer = new SoundPlayer(@"button2.wav");
+        public int soundOnFlag;
         public Mainform()
         {
             InitializeComponent();
+            backMusic();
+            soundOnFlag = 1;
             screen = new myWorkouts();
             screen2 = new AddWorkout();
             secPanel.AutoSize = true;
@@ -60,8 +60,16 @@ namespace winformsTEST
             }
         }
 
+        private void backMusic()
+        {
+            backgroundMusic.URL = @"background-music.wav";
+            backgroundMusic.settings.playCount = 9999;
+            backgroundMusic.Visible = false;
+            backgroundMusic.settings.volume = 5;
+        }
         private void newWorkout_Click(object sender, EventArgs e)
         {
+            sPlayer.Play();
             secPanel.Controls.Add(screen2);
             screen2.BringToFront();
             screen2.Size = secPanel.Size;
@@ -70,11 +78,12 @@ namespace winformsTEST
             Headline.BackColor = Color.FromName("RoyalBlue");
             Minimize.BackColor = Color.FromName("RoyalBlue");
             Exit.BackColor = Color.FromName("RoyalBlue");
-            sPlayer.Play();
+
         }
 
         private void myWorkouts_Click(object sender, EventArgs e)
         {
+            sPlayer.Play();
             secPanel.Controls.Add(screen);
             screen.BringToFront();
             screen.Size = this.Size;
@@ -89,6 +98,7 @@ namespace winformsTEST
 
         private void Home_Click(object sender, EventArgs e)
         {
+            sPlayer.Play();
             secPanel.Controls.Add(background);
             background.BringToFront();
             Headline.Text = "HOME";
@@ -134,6 +144,7 @@ namespace winformsTEST
 
         private void Exit_Click(object sender, EventArgs e)
         {
+            sPlayer.Play();
             IFormatter formatter = new BinaryFormatter();
             Stream stream = new FileStream("main_file", FileMode.Create, FileAccess.Write, FileShare.None);
             formatter.Serialize(stream, AddWorkout.workout_list);
@@ -143,12 +154,26 @@ namespace winformsTEST
 
         private void Minimize_Click(object sender, EventArgs e)
         {
+            sPlayer.Play();
             this.WindowState = FormWindowState.Minimized;
         }
 
-/*        private void Exit_MouseHover(object sender, EventArgs e)
+        private void Sound_Click(object sender, EventArgs e)
         {
-            this.BackColor = Headline.BackColor;
-        }*/
+            if(soundOnFlag == 1)
+            {
+                backgroundMusic.settings.mute = true;
+                soundOnFlag = 0;
+                Sound.Image = Image.FromFile(@"soundOFF.PNG");
+            }
+            else
+            {
+                backgroundMusic.settings.mute = false;
+                soundOnFlag = 1;
+                Sound.Image = Image.FromFile(@"soundON.PNG");
+
+            }
+
+        }
     }
 }

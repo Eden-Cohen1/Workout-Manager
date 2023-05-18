@@ -48,13 +48,16 @@ namespace winformsTEST
             this.Headline = new System.Windows.Forms.Label();
             this.Muscle1 = new System.Windows.Forms.Label();
             this.secPanel = new System.Windows.Forms.Panel();
+            this.backgroundMusic = new AxWMPLib.AxWindowsMediaPlayer();
             this.background = new System.Windows.Forms.PictureBox();
+            this.Sound = new System.Windows.Forms.Button();
             this.FirstPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.topPanel.SuspendLayout();
             this.secPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.backgroundMusic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
             this.SuspendLayout();
             // 
@@ -261,6 +264,7 @@ namespace winformsTEST
             // 
             this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.topPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.topPanel.Controls.Add(this.Sound);
             this.topPanel.Controls.Add(this.Minimize);
             this.topPanel.Controls.Add(this.Exit);
             this.topPanel.Controls.Add(this.Headline);
@@ -325,6 +329,7 @@ namespace winformsTEST
             // secPanel
             // 
             this.secPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.secPanel.Controls.Add(this.backgroundMusic);
             this.secPanel.Controls.Add(this.background);
             this.secPanel.ForeColor = System.Drawing.SystemColors.Info;
             this.secPanel.Location = new System.Drawing.Point(233, 49);
@@ -332,6 +337,15 @@ namespace winformsTEST
             this.secPanel.Name = "secPanel";
             this.secPanel.Size = new System.Drawing.Size(1215, 721);
             this.secPanel.TabIndex = 14;
+            // 
+            // backgroundMusic
+            // 
+            this.backgroundMusic.Enabled = true;
+            this.backgroundMusic.Location = new System.Drawing.Point(381, 456);
+            this.backgroundMusic.Name = "backgroundMusic";
+            this.backgroundMusic.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("backgroundMusic.OcxState")));
+            this.backgroundMusic.Size = new System.Drawing.Size(75, 23);
+            this.backgroundMusic.TabIndex = 21;
             // 
             // background
             // 
@@ -343,6 +357,22 @@ namespace winformsTEST
             this.background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.background.TabIndex = 20;
             this.background.TabStop = false;
+            // 
+            // Sound
+            // 
+            this.Sound.BackColor = System.Drawing.Color.Transparent;
+            this.Sound.FlatAppearance.BorderSize = 0;
+            this.Sound.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Sound.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Sound.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Sound.ForeColor = System.Drawing.Color.Transparent;
+            this.Sound.Image = ((System.Drawing.Image)(resources.GetObject("Sound.Image")));
+            this.Sound.Location = new System.Drawing.Point(21, 9);
+            this.Sound.Name = "Sound";
+            this.Sound.Size = new System.Drawing.Size(32, 32);
+            this.Sound.TabIndex = 22;
+            this.Sound.UseVisualStyleBackColor = false;
+            this.Sound.Click += new System.EventHandler(this.Sound_Click);
             // 
             // Mainform
             // 
@@ -365,6 +395,7 @@ namespace winformsTEST
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.topPanel.ResumeLayout(false);
             this.secPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.backgroundMusic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -392,6 +423,8 @@ namespace winformsTEST
         public System.Windows.Forms.Label Headline;
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.Button Minimize;
+        private AxWMPLib.AxWindowsMediaPlayer backgroundMusic;
+        private System.Windows.Forms.Button Sound;
     }
 }
 

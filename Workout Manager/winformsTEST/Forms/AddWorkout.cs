@@ -33,7 +33,7 @@ namespace winformsTEST
         }
         private void Add_workout_Click(object sender, EventArgs e)
         {
-
+            Mainform.sPlayer.Play();
             workoutAdded.Enabled = true;
             workoutAdded.Visible = true;
             workout_flag = 0; 
@@ -72,6 +72,7 @@ namespace winformsTEST
 
         private void Add_New_Ex_Click(object sender, EventArgs e)
         {
+            Mainform.sPlayer.Play();
             AddEx screen = new AddEx();
             Mainform.instance.secPanel.Controls.Add(screen);
             screen.BringToFront();
@@ -120,17 +121,20 @@ namespace winformsTEST
 
         private void dropDown_Click(object sender, EventArgs e)
         {
+            Mainform.sPlayer.Play();
             timer1.Start();
         }
 
         private void StrenghtW_Click(object sender, EventArgs e)
         {
+            Mainform.sPlayer.Play();
             timer1.Start();
             dropDown.Text = StrenghtW.Text;
         }
 
         private void CardioW_Click(object sender, EventArgs e)
         {
+            Mainform.sPlayer.Play();
             timer1.Start();
             dropDown.Text = CardioW.Text;
         }

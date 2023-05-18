@@ -27,6 +27,7 @@ namespace winformsTEST
 
         private void intensityDropDown_Click(object sender, EventArgs e)
         {
+            Mainform.sPlayer.Play();
             timer1.Start();
 
         }
@@ -55,6 +56,7 @@ namespace winformsTEST
 
         private void Easy_Click(object sender, EventArgs e)
         {
+            Mainform.sPlayer.Play();
             timer1.Start();
             intensityDropDown.Text = Easy.Text;
             intansityFlag = 1; // setting intensity level for adding the exercise
@@ -62,6 +64,7 @@ namespace winformsTEST
 
         private void Medium_Click(object sender, EventArgs e)
         {
+            Mainform.sPlayer.Play();
             timer1.Start();
             intensityDropDown.Text = Medium.Text;
             intansityFlag = 2;
@@ -69,6 +72,7 @@ namespace winformsTEST
 
         private void Hard_Click(object sender, EventArgs e)
         {
+            Mainform.sPlayer.Play();
             timer1.Start();
             intensityDropDown.Text = Hard.Text;
             intansityFlag = 3;
@@ -76,6 +80,7 @@ namespace winformsTEST
 
         private void SaveChanges_Click(object sender, EventArgs e)
         {
+            Mainform.sPlayer.Play();
             WorkoutPage.currExercise._name = nameTextBox.Text;
             WorkoutPage.currExercise._muscle._name = muscleTextBox.Text;
             
@@ -110,11 +115,13 @@ namespace winformsTEST
        
         private void Exit_Click(object sender, EventArgs e)
         {
+            Mainform.sPlayer.Play();
             this.Close();
         }
 
         private void Minimize_Click(object sender, EventArgs e)
         {
+            Mainform.sPlayer.Play();
             this.WindowState = FormWindowState.Minimized;
         }
 

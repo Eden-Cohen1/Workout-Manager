@@ -28,6 +28,7 @@ namespace winformsTEST
 
         private void dropDown_Click(object sender, EventArgs e)
         {
+            Mainform.sPlayer.Play();
             timer1.Start();
 
         }
@@ -56,6 +57,7 @@ namespace winformsTEST
 
         private void Stamina_Click(object sender, EventArgs e)
         {
+            Mainform.sPlayer.Play();
             EnduranceEx ex = new EnduranceEx();
             this.Controls.Add(ex);
             ex.Location = changeByType.Location;
@@ -68,6 +70,7 @@ namespace winformsTEST
 
         private void Strenght_Click(object sender, EventArgs e)
         {
+            Mainform.sPlayer.Play();
             StrenghtEx ex = new StrenghtEx();
             this.Controls.Add(ex);
             ex.Location = changeByType.Location;
@@ -83,6 +86,7 @@ namespace winformsTEST
 
         private void HIIT_Click(object sender, EventArgs e)
         {
+            Mainform.sPlayer.Play();
             HIITEx ex = new HIITEx();
             this.Controls.Add(ex);
             ex.Location = changeByType.Location;
@@ -99,6 +103,7 @@ namespace winformsTEST
             // getting all of the data from the needed forms, converting it to
             // the correct data type and sending to the right constructor, then
             // adding the new exercise that was created to the exercise list of the last workout...
+            Mainform.sPlayer.Play();
             if (newEx == false) // adding an exercise to a new workout.
             {
                 if (ExType == 1)

@@ -28,6 +28,7 @@ namespace winformsTEST
 
         private void ViewWorkout_Click(object sender, EventArgs e) //open view workout page and fill out the workout exercises.
         {
+            Mainform.sPlayer.Play();
             foreach (ListViewItem item in myWorkoutsList.Items)
             {
                 if (item.Selected == true)
@@ -98,6 +99,7 @@ namespace winformsTEST
 
         private void deleteBTN_Click(object sender, EventArgs e)
         {
+            Mainform.sPlayer.Play();
             foreach (ListViewItem item in myWorkoutsList.Items)
             {
                 if (item.Selected == true)
