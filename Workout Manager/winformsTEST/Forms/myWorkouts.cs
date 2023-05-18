@@ -33,12 +33,12 @@ namespace winformsTEST
                 if (item.Selected == true)
                 {
                     WorkoutPage screen = new WorkoutPage();
-                    MainForm.instance.secPanel.Controls.Add(screen);
+                    Mainform.instance.secPanel.Controls.Add(screen);
                     screen.BringToFront();
                     foreach (Workout workout in AddWorkout.workout_list) {
                         if(workout._workoutName == item.SubItems[0].Text) // searches for the correct workout
                         {
-                            MainForm.instance.Headline.Text = workout._workoutName;
+                            Mainform.instance.Headline.Text = workout._workoutName;
                             WorkoutPage.currWorkout = workout;
                             foreach (StrenghtExercise ex in workout._ExerciseList.OfType<StrenghtExercise>()) // for the strenght workouts
                             {

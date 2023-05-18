@@ -73,7 +73,7 @@ namespace winformsTEST
         private void Add_New_Ex_Click(object sender, EventArgs e)
         {
             AddEx screen = new AddEx();
-            MainForm.instance.secPanel.Controls.Add(screen);
+            Mainform.instance.secPanel.Controls.Add(screen);
             screen.BringToFront();
             AddEx.newEx = false;
 
@@ -90,8 +90,8 @@ namespace winformsTEST
                 workout_flag = 1;
 
             }
-            MainForm.instance.Headline.Text = "ADDING A NEW EXERCISE";
-            MainForm.instance.Headline.BackColor = Color.FromName("RoyalBlue");
+            Mainform.instance.Headline.Text = "ADDING A NEW EXERCISE";
+            Mainform.instance.Headline.BackColor = Color.FromName("RoyalBlue");
         }
 
         private void timer1_Tick(object sender, EventArgs e)

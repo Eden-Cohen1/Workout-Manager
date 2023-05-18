@@ -1,7 +1,7 @@
 ﻿
 namespace winformsTEST
 {
-    partial class MainForm
+    partial class Mainform
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace winformsTEST
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mainform));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.FirstPanel = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
@@ -63,13 +63,12 @@ namespace winformsTEST
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(476, 92);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(238, 48);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(400, 192);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // FirstPanel
@@ -89,9 +88,9 @@ namespace winformsTEST
             this.FirstPanel.Controls.Add(this.tableLayoutPanel1);
             this.FirstPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.FirstPanel.Location = new System.Drawing.Point(0, 0);
-            this.FirstPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FirstPanel.Margin = new System.Windows.Forms.Padding(2);
             this.FirstPanel.Name = "FirstPanel";
-            this.FirstPanel.Size = new System.Drawing.Size(464, 1504);
+            this.FirstPanel.Size = new System.Drawing.Size(233, 772);
             this.FirstPanel.TabIndex = 18;
             // 
             // button5
@@ -105,10 +104,9 @@ namespace winformsTEST
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(-2, -2);
-            this.button5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button5.Location = new System.Drawing.Point(-1, -1);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(466, 302);
+            this.button5.Size = new System.Drawing.Size(233, 157);
             this.button5.TabIndex = 35;
             this.button5.Text = "SHAPE SHIFT";
             this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -118,39 +116,35 @@ namespace winformsTEST
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(296, 1354);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox3.Location = new System.Drawing.Point(148, 704);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(116, 102);
+            this.pictureBox3.Size = new System.Drawing.Size(58, 53);
             this.pictureBox3.TabIndex = 38;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(40, 1354);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox2.Location = new System.Drawing.Point(20, 704);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(116, 102);
+            this.pictureBox2.Size = new System.Drawing.Size(58, 53);
             this.pictureBox2.TabIndex = 37;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(168, 1354);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(84, 704);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(116, 102);
+            this.pictureBox1.Size = new System.Drawing.Size(58, 53);
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(464, 6);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Location = new System.Drawing.Point(232, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2102, 94);
+            this.panel1.Size = new System.Drawing.Size(1051, 49);
             this.panel1.TabIndex = 0;
             // 
             // MyWorkouts
@@ -164,10 +158,9 @@ namespace winformsTEST
             this.MyWorkouts.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.MyWorkouts.Image = ((System.Drawing.Image)(resources.GetObject("MyWorkouts.Image")));
             this.MyWorkouts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MyWorkouts.Location = new System.Drawing.Point(-2, 350);
-            this.MyWorkouts.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.MyWorkouts.Location = new System.Drawing.Point(-1, 182);
             this.MyWorkouts.Name = "MyWorkouts";
-            this.MyWorkouts.Size = new System.Drawing.Size(466, 163);
+            this.MyWorkouts.Size = new System.Drawing.Size(233, 85);
             this.MyWorkouts.TabIndex = 1;
             this.MyWorkouts.Text = "MY WORKOUTS";
             this.MyWorkouts.UseVisualStyleBackColor = false;
@@ -183,8 +176,7 @@ namespace winformsTEST
             this.circularProgressBar1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.circularProgressBar1.InnerMargin = 2;
             this.circularProgressBar1.InnerWidth = -1;
-            this.circularProgressBar1.Location = new System.Drawing.Point(80, 1050);
-            this.circularProgressBar1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.circularProgressBar1.Location = new System.Drawing.Point(40, 546);
             this.circularProgressBar1.MarqueeAnimationSpeed = 2000;
             this.circularProgressBar1.Name = "circularProgressBar1";
             this.circularProgressBar1.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(51)))));
@@ -193,7 +185,7 @@ namespace winformsTEST
             this.circularProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(139)))), ((int)(((byte)(201)))));
             this.circularProgressBar1.ProgressWidth = 10;
             this.circularProgressBar1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.circularProgressBar1.Size = new System.Drawing.Size(288, 277);
+            this.circularProgressBar1.Size = new System.Drawing.Size(144, 144);
             this.circularProgressBar1.StartAngle = 270;
             this.circularProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.circularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
@@ -219,10 +211,9 @@ namespace winformsTEST
             this.AboutUs.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.AboutUs.Image = ((System.Drawing.Image)(resources.GetObject("AboutUs.Image")));
             this.AboutUs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AboutUs.Location = new System.Drawing.Point(-2, 875);
-            this.AboutUs.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.AboutUs.Location = new System.Drawing.Point(-1, 455);
             this.AboutUs.Name = "AboutUs";
-            this.AboutUs.Size = new System.Drawing.Size(478, 163);
+            this.AboutUs.Size = new System.Drawing.Size(239, 85);
             this.AboutUs.TabIndex = 17;
             this.AboutUs.Text = "ABOUT US";
             this.AboutUs.UseVisualStyleBackColor = false;
@@ -239,10 +230,9 @@ namespace winformsTEST
             this.Videos.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Videos.Image = ((System.Drawing.Image)(resources.GetObject("Videos.Image")));
             this.Videos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Videos.Location = new System.Drawing.Point(-2, 700);
-            this.Videos.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Videos.Location = new System.Drawing.Point(-1, 364);
             this.Videos.Name = "Videos";
-            this.Videos.Size = new System.Drawing.Size(466, 163);
+            this.Videos.Size = new System.Drawing.Size(233, 85);
             this.Videos.TabIndex = 16;
             this.Videos.Text = "VIDEOS";
             this.Videos.UseVisualStyleBackColor = false;
@@ -259,10 +249,9 @@ namespace winformsTEST
             this.newWorkout.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.newWorkout.Image = ((System.Drawing.Image)(resources.GetObject("newWorkout.Image")));
             this.newWorkout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.newWorkout.Location = new System.Drawing.Point(-2, 525);
-            this.newWorkout.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.newWorkout.Location = new System.Drawing.Point(-1, 273);
             this.newWorkout.Name = "newWorkout";
-            this.newWorkout.Size = new System.Drawing.Size(466, 163);
+            this.newWorkout.Size = new System.Drawing.Size(233, 85);
             this.newWorkout.TabIndex = 2;
             this.newWorkout.Text = "NEW WORKOUT";
             this.newWorkout.UseVisualStyleBackColor = false;
@@ -276,10 +265,10 @@ namespace winformsTEST
             this.topPanel.Controls.Add(this.Exit);
             this.topPanel.Controls.Add(this.Headline);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.topPanel.Location = new System.Drawing.Point(464, 0);
-            this.topPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topPanel.Location = new System.Drawing.Point(233, 0);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(2);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(2424, 1504);
+            this.topPanel.Size = new System.Drawing.Size(1203, 772);
             this.topPanel.TabIndex = 0;
             // 
             // Minimize
@@ -289,10 +278,9 @@ namespace winformsTEST
             this.Minimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Minimize.Image = ((System.Drawing.Image)(resources.GetObject("Minimize.Image")));
-            this.Minimize.Location = new System.Drawing.Point(2252, 17);
-            this.Minimize.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Minimize.Location = new System.Drawing.Point(1126, 9);
             this.Minimize.Name = "Minimize";
-            this.Minimize.Size = new System.Drawing.Size(64, 62);
+            this.Minimize.Size = new System.Drawing.Size(32, 32);
             this.Minimize.TabIndex = 22;
             this.Minimize.UseVisualStyleBackColor = true;
             this.Minimize.Click += new System.EventHandler(this.Minimize_Click);
@@ -306,10 +294,9 @@ namespace winformsTEST
             this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Exit.ForeColor = System.Drawing.Color.Transparent;
             this.Exit.Image = ((System.Drawing.Image)(resources.GetObject("Exit.Image")));
-            this.Exit.Location = new System.Drawing.Point(2328, 17);
-            this.Exit.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Exit.Location = new System.Drawing.Point(1164, 9);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(64, 62);
+            this.Exit.Size = new System.Drawing.Size(32, 32);
             this.Exit.TabIndex = 22;
             this.Exit.UseVisualStyleBackColor = false;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
@@ -321,9 +308,8 @@ namespace winformsTEST
             this.Headline.Font = new System.Drawing.Font("Segoe Print", 11.525F, System.Drawing.FontStyle.Bold);
             this.Headline.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Headline.Location = new System.Drawing.Point(0, 0);
-            this.Headline.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Headline.Name = "Headline";
-            this.Headline.Size = new System.Drawing.Size(2422, 94);
+            this.Headline.Size = new System.Drawing.Size(1201, 49);
             this.Headline.TabIndex = 21;
             this.Headline.Text = "HOME";
             this.Headline.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -331,10 +317,9 @@ namespace winformsTEST
             // Muscle1
             // 
             this.Muscle1.AutoSize = true;
-            this.Muscle1.Location = new System.Drawing.Point(574, 325);
-            this.Muscle1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.Muscle1.Location = new System.Drawing.Point(287, 169);
             this.Muscle1.Name = "Muscle1";
-            this.Muscle1.Size = new System.Drawing.Size(0, 25);
+            this.Muscle1.Size = new System.Drawing.Size(0, 13);
             this.Muscle1.TabIndex = 0;
             // 
             // secPanel
@@ -342,10 +327,10 @@ namespace winformsTEST
             this.secPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.secPanel.Controls.Add(this.background);
             this.secPanel.ForeColor = System.Drawing.SystemColors.Info;
-            this.secPanel.Location = new System.Drawing.Point(466, 94);
-            this.secPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.secPanel.Location = new System.Drawing.Point(233, 49);
+            this.secPanel.Margin = new System.Windows.Forms.Padding(2);
             this.secPanel.Name = "secPanel";
-            this.secPanel.Size = new System.Drawing.Size(2430, 1387);
+            this.secPanel.Size = new System.Drawing.Size(1215, 721);
             this.secPanel.TabIndex = 14;
             // 
             // background
@@ -353,26 +338,24 @@ namespace winformsTEST
             this.background.Dock = System.Windows.Forms.DockStyle.Fill;
             this.background.Image = ((System.Drawing.Image)(resources.GetObject("background.Image")));
             this.background.Location = new System.Drawing.Point(0, 0);
-            this.background.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.background.Name = "background";
-            this.background.Size = new System.Drawing.Size(2430, 1387);
+            this.background.Size = new System.Drawing.Size(1215, 721);
             this.background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.background.TabIndex = 20;
             this.background.TabStop = false;
             // 
-            // MainForm
+            // Mainform
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(2888, 1504);
+            this.ClientSize = new System.Drawing.Size(1436, 772);
             this.Controls.Add(this.secPanel);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.Muscle1);
             this.Controls.Add(this.FirstPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.Name = "MainForm";
+            this.Name = "Mainform";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SHAPE SHIFT";

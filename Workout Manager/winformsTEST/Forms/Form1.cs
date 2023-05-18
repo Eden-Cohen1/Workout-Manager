@@ -13,18 +13,21 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Runtime.InteropServices;
+using System.Media;
 
 namespace winformsTEST
 {
 
-    public partial class MainForm : Form
+    public partial class Mainform : Form
     {
-        public static MainForm instance;
+        public static Mainform instance;
         public static myWorkouts screen;
         public static AddWorkout screen2;
+        SoundPlayer sPlayer = new SoundPlayer(@"C:\Users\eden7\source\repos\switch-93378.mp3");
 
-/*        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-*/        public MainForm()
+        /*        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        */
+        public Mainform()
         {
             InitializeComponent();
             screen = new myWorkouts();
@@ -67,6 +70,7 @@ namespace winformsTEST
             Headline.BackColor = Color.FromName("RoyalBlue");
             Minimize.BackColor = Color.FromName("RoyalBlue");
             Exit.BackColor = Color.FromName("RoyalBlue");
+            sPlayer.Play();
         }
 
         private void myWorkouts_Click(object sender, EventArgs e)
@@ -79,6 +83,7 @@ namespace winformsTEST
             Minimize.BackColor = Color.FromName("RoyalBlue");
             Exit.BackColor = Color.FromName("RoyalBlue");
             topPanel.BackColor = Color.FromName("RoyalBlue");
+            
         }
 
 
@@ -90,8 +95,8 @@ namespace winformsTEST
             Headline.BackColor = Color.FromArgb(28, 26, 33);
             Minimize.BackColor = Color.FromArgb(28, 26, 33);
             Exit.BackColor = Color.FromArgb(28, 26, 33);
-            topPanel.BackColor = Color.FromName("RoyalBlue");
-
+            topPanel.BackColor = Color.FromArgb(28, 26, 33);
+            
 
         }
 
@@ -141,6 +146,9 @@ namespace winformsTEST
             this.WindowState = FormWindowState.Minimized;
         }
 
-
+/*        private void Exit_MouseHover(object sender, EventArgs e)
+        {
+            this.BackColor = Headline.BackColor;
+        }*/
     }
 }

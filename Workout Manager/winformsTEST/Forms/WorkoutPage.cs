@@ -109,7 +109,7 @@ namespace winformsTEST
         private void Add_Ex_Click(object sender, EventArgs e)
         {
             AddEx screen = new AddEx();
-            MainForm.instance.secPanel.Controls.Add(screen);
+            Mainform.instance.secPanel.Controls.Add(screen);
             screen.BringToFront();
             screen.Dock = DockStyle.Fill;
             AddEx.newEx = true;

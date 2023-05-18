@@ -181,7 +181,7 @@ namespace winformsTEST
                     update_list_HIIT(Exer);
                 }
             }
-            MainForm.instance.secPanel.Controls.Remove(this);
+            Mainform.instance.secPanel.Controls.Remove(this);
         }
 
         public static void update_list_Strenght(StrenghtExercise Exer)
