@@ -14,7 +14,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Media;
-
+using winformsTEST.Forms;
 namespace winformsTEST
 {
 
@@ -54,7 +54,8 @@ namespace winformsTEST
                 string name = workout._workoutName;
                 string description = workout._Description;
                 string duration = workout._Duration;
-                string[] listnames = { name, duration + " minutes", type, description };
+                string calories = workout._totalCalories.ToString();
+                string[] listnames = { name, duration + " minutes", type, description,calories };
                 var listviewitem = new ListViewItem(listnames);
                 myWorkouts.instance.myWorkoutsList.Items.Add(listviewitem);
             }
@@ -65,7 +66,7 @@ namespace winformsTEST
             backgroundMusic.URL = @"background-music.wav";
             backgroundMusic.settings.playCount = 9999;
             backgroundMusic.Visible = false;
-            backgroundMusic.settings.volume = 5;
+            backgroundMusic.settings.volume = 20;
         }
         private void newWorkout_Click(object sender, EventArgs e)
         {
@@ -77,6 +78,7 @@ namespace winformsTEST
             Headline.Text = "ADDING A NEW WORKOUT ";
             Headline.BackColor = Color.FromName("RoyalBlue");
             Minimize.BackColor = Color.FromName("RoyalBlue");
+            topPanel.BackColor = Color.FromName("RoyalBlue");
             Exit.BackColor = Color.FromName("RoyalBlue");
 
         }
@@ -174,6 +176,34 @@ namespace winformsTEST
 
             }
 
+        }
+
+        private void Videos_Click(object sender, EventArgs e)
+        {
+            Videos videoPage = new Videos();
+            sPlayer.Play();
+            secPanel.Controls.Add(videoPage);
+            videoPage.BringToFront();
+            videoPage.Size = this.Size;
+            Headline.Text = "VIDEO TUTURIALS";
+            Headline.BackColor = Color.FromName("RoyalBlue");
+            Minimize.BackColor = Color.FromName("RoyalBlue");
+            Exit.BackColor = Color.FromName("RoyalBlue");
+            topPanel.BackColor = Color.FromName("RoyalBlue");
+        }
+
+        private void AboutUs_Click(object sender, EventArgs e)
+        {
+            AboutUs about = new AboutUs();
+            sPlayer.Play();
+            secPanel.Controls.Add(about);
+            about.BringToFront();
+            about.Size = this.Size;
+            Headline.Text = "ABOUT US";
+            Headline.BackColor = Color.FromName("RoyalBlue");
+            Minimize.BackColor = Color.FromName("RoyalBlue");
+            Exit.BackColor = Color.FromName("RoyalBlue");
+            topPanel.BackColor = Color.FromName("RoyalBlue");
         }
     }
 }

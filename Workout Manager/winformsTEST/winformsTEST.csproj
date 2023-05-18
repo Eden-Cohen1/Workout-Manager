@@ -52,6 +52,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\AboutUs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutUs.Designer.cs">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddEx.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -69,6 +75,12 @@
     </Compile>
     <Compile Include="Forms\EditEx.Designer.cs">
       <DependentUpon>EditEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Videos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Videos.Designer.cs">
+      <DependentUpon>Videos.cs</DependentUpon>
     </Compile>
     <Compile Include="Small-UserControl\EnduranceEx.cs">
       <SubType>UserControl</SubType>
@@ -116,6 +128,9 @@
     <Compile Include="Forms\WorkoutPage.Designer.cs">
       <DependentUpon>WorkoutPage.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\AboutUs.resx">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddEx.resx">
       <DependentUpon>AddEx.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditEx.resx">
       <DependentUpon>EditEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Videos.resx">
+      <DependentUpon>Videos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Small-UserControl\EnduranceEx.resx">
       <DependentUpon>EnduranceEx.cs</DependentUpon>

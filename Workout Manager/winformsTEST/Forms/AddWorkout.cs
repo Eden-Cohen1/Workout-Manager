@@ -36,8 +36,7 @@ namespace winformsTEST
             Mainform.sPlayer.Play();
             workoutAdded.Enabled = true;
             workoutAdded.Visible = true;
-            workout_flag = 0; 
-
+            workout_flag = 0;
             foreach (Control control in this.Controls)
             {
                 if(control is TextBox)
@@ -60,10 +59,12 @@ namespace winformsTEST
             {
                 type = "NO TYPE";
             }
+            last_workout.CalcTotalCalories();
             string name = last_workout._workoutName;
             string description = last_workout._Description;
             string duration = last_workout._Duration;
-            string[] listnames = { name, duration, type, description };
+            string calories = last_workout._totalCalories.ToString();
+            string[] listnames = { name, duration + " minutes", type, description, calories };
             var listviewitem = new ListViewItem(listnames);
             myWorkouts.instance.myWorkoutsList.Items.Add(listviewitem);
             ExList.Items.Clear();

@@ -65,3 +65,5 @@ C:\Users\eden7\source\repos\Workout-Manager2\Workout Manager\winformsTEST\bin\De
 C:\Users\eden7\source\repos\Workout-Manager2\Workout Manager\winformsTEST\obj\Debug\Interop.WMPLib.dll
 C:\Users\eden7\source\repos\Workout-Manager2\Workout Manager\winformsTEST\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\eden7\source\repos\Workout-Manager2\Workout Manager\winformsTEST\obj\Debug\winformsTEST.csproj.ResolveComReference.cache
+C:\Users\eden7\source\repos\Workout-Manager2\Workout Manager\winformsTEST\obj\Debug\winformsTEST.Forms.Videos.resources
+C:\Users\eden7\source\repos\Workout-Manager2\Workout Manager\winformsTEST\obj\Debug\winformsTEST.Forms.AboutUs.resources

@@ -119,6 +119,9 @@ namespace winformsTEST
 
         }
 
+        private void myWorkoutsList_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

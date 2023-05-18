@@ -15,6 +15,7 @@ namespace winformsTEST
         public string _workoutName { get; set; }
         public string _Description { get; set; }
         public string _Duration { get; set; }
+        public int _totalCalories { get; set; }
         public List<Exercise> _ExerciseList { get; set; }
 
 
@@ -23,6 +24,7 @@ namespace winformsTEST
             _workoutName = "No Name";
             _Description = "No Description.";
             _Duration = "No Duration";
+            _totalCalories = 0;
         }
         public Workout(string name, string description, string duration)
         {
@@ -30,6 +32,21 @@ namespace winformsTEST
             this._workoutName = name;
             this._Description = description;
             this._Duration = duration;
+            this._totalCalories = 0;
+
+        }
+
+        public void CalcTotalCalories()
+        {
+            if (_ExerciseList.Count == 0)
+            {
+                return;
+            }
+
+            foreach(Exercise ex in _ExerciseList)
+            {
+                _totalCalories += ex._calBurned;
+            }
         }
 
     }
@@ -38,14 +55,12 @@ namespace winformsTEST
     {
         int _totalNumOfSets { get; set; }
         int _totalKilosLifted { get; set; }
-        string TrainingArea { get; set; }
 
         public StrenghtWorkout()
         {
             type = 1;
             _totalKilosLifted = 0;
             _totalNumOfSets = 0;
-            TrainingArea = "Home";
         }
         public StrenghtWorkout(string name, string description, string duration)
         {
@@ -56,19 +71,15 @@ namespace winformsTEST
             type = 1;
             _totalKilosLifted = 0;
             _totalNumOfSets = 0;
-            TrainingArea = "Home";
         }
 
     }
     [Serializable]
     public class CardioWorkout : Workout
     {
-        public double _totalCalories { get; set; }
-
         public CardioWorkout()
         {
             type = 2;
-            _totalCalories = calculateCalories();
         }
         public CardioWorkout(string name, string description, string duration)
         {
@@ -77,51 +88,7 @@ namespace winformsTEST
             this._Description = description;
             this._Duration = duration;
             type = 2;
-            _totalCalories = calculateCalories();
-        }
-        public double calculateCalories()
-        {
-            double result = 0.0; int i;
-            for (i = 0; i < _ExerciseList.Count; i++)
-            {
-                result += _ExerciseList[i].CalcCalories();
-            }
-            return result;
         }
 
     }
-/*
-    public class HIIT: CardioWorkout
-    {
-        int _intervalCount { get; set; }
-        int _intervalDur { get; set; }
-        int _restTime { get; set; }
-
-        public override double calculateCalories()
-        {
-            double result =0.0; int i;
-            for(i = 0; i < _ExerciseList.Count; i++)
-            {
-               result +=  _ExerciseList[i].CalcCalories();
-            }
-            return result;
-        }
-    }
-    public class Endurance: CardioWorkout
-    {
-        double _distance { get; set; }
-        double _avragePace { get; set; }
-
-        
-
-        public override double calculateCalories()
-        {
-            double result = 0.0; int i;
-            for (i = 0; i < _ExerciseList.Count; i++)
-            {
-                result += _ExerciseList[i].CalcCalories();
-            }
-            return result;
-        }
-    }*/
 }
