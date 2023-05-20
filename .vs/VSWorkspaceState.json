@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Workout Manager",
+    "\\Workout Manager\\winformsTEST",
+    "\\Workout Manager\\winformsTEST\\Forms"
   ],
-  "SelectedNode": "\\winformsTEST.sln",
+  "SelectedNode": "\\Workout Manager\\winformsTEST\\Forms\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }

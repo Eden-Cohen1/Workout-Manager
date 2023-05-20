@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EXERCISE;
+using System.Drawing;
+
 
 namespace winformsTEST
 {
@@ -16,6 +18,8 @@ namespace winformsTEST
         public string _Description { get; set; }
         public string _Duration { get; set; }
         public int _totalCalories { get; set; }
+
+        public Image logo;
         public List<Exercise> _ExerciseList { get; set; }
 
 
@@ -61,6 +65,7 @@ namespace winformsTEST
             type = 1;
             _totalKilosLifted = 0;
             _totalNumOfSets = 0;
+            logo = Image.FromFile(@"Strenght.png");
         }
         public StrenghtWorkout(string name, string description, string duration)
         {
@@ -71,6 +76,8 @@ namespace winformsTEST
             type = 1;
             _totalKilosLifted = 0;
             _totalNumOfSets = 0;
+            logo = Image.FromFile(@"Strenght.png");
+
         }
 
     }
@@ -80,6 +87,8 @@ namespace winformsTEST
         public CardioWorkout()
         {
             type = 2;
+            logo = Image.FromFile(@"Endurance.png");
+
         }
         public CardioWorkout(string name, string description, string duration)
         {
@@ -87,6 +96,7 @@ namespace winformsTEST
             this._workoutName = name;
             this._Description = description;
             this._Duration = duration;
+            logo = Image.FromFile(@"Endurance.png");
             type = 2;
         }
 

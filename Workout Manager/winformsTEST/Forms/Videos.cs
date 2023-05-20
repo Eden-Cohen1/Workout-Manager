@@ -13,99 +13,58 @@ namespace winformsTEST.Forms
 {
     public partial class Videos : UserControl
     {
-
         public Videos()
         {
             InitializeComponent();
+        }
 
-    }
-
-    private void button2_Click(object sender, EventArgs e)
+        private void VideoPlay(string filePath)
         {
-            string filePath = @"Shoulder Press.mp4";
             if (!string.IsNullOrEmpty(filePath) && File.Exists(filePath))
             {
                 VideoPlayer.URL = filePath;
                 VideoPlayer.Ctlcontrols.play();
                 Mainform.instance.backgroundMusic.settings.mute = true;
             }
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            VideoPlay(@"Shoulder Press.mp4");
         }
 
         private void Tricep_Click(object sender, EventArgs e)
         {
-            string filePath = @"Tricep Extension.mp4";
-            if (!string.IsNullOrEmpty(filePath) && File.Exists(filePath))
-            {
-                VideoPlayer.URL = filePath;
-                VideoPlayer.Ctlcontrols.play();
-                Mainform.instance.backgroundMusic.settings.mute = true;
-            }
+            VideoPlay(@"Tricep Extension.mp4");
         }
 
         private void Chest_Click(object sender, EventArgs e)
         {
-            string filePath = @"Chest.mp4";
-            if (!string.IsNullOrEmpty(filePath) && File.Exists(filePath))
-            {
-                VideoPlayer.URL = filePath;
-                VideoPlayer.Ctlcontrols.play();
-                Mainform.instance.backgroundMusic.settings.mute = true;
-            }
+            VideoPlay(@"Chest.mp4");
         }
 
         private void Biceps_Click(object sender, EventArgs e)
         {
-            string filePath = @"Bicep Curl.mp4";
-            if (!string.IsNullOrEmpty(filePath) && File.Exists(filePath))
-            {
-                VideoPlayer.URL = filePath;
-                VideoPlayer.Ctlcontrols.play();
-                Mainform.instance.backgroundMusic.settings.mute = true;
-            }
+            VideoPlay(@"Bicep Curl.mp4");
         }
 
         private void LowerBack_Click(object sender, EventArgs e)
         {
-            string filePath = @"Lower Back.mp4";
-            if (!string.IsNullOrEmpty(filePath) && File.Exists(filePath))
-            {
-                VideoPlayer.URL = filePath;
-                VideoPlayer.Ctlcontrols.play();
-                Mainform.instance.backgroundMusic.settings.mute = true;
-            }
+            VideoPlay(@"Lower Back.mp4");
         }
 
         private void UpperBack_Click(object sender, EventArgs e)
         {
-            string filePath = @"Upper Back.mp4";
-            if (!string.IsNullOrEmpty(filePath) && File.Exists(filePath))
-            {
-                VideoPlayer.URL = filePath;
-                VideoPlayer.Ctlcontrols.play();
-                Mainform.instance.backgroundMusic.settings.mute = true;
-            }
+            VideoPlay(@"Upper Back.mp4");
         }
 
         private void Quads_Click(object sender, EventArgs e)
         {
-            string filePath = @"Quads.mp4";
-            if (!string.IsNullOrEmpty(filePath) && File.Exists(filePath))
-            {
-                VideoPlayer.URL = filePath;
-                VideoPlayer.Ctlcontrols.play();
-                Mainform.instance.backgroundMusic.settings.mute = true;
-            }
+            VideoPlay(@"Quads.mp4");
         }
 
         private void Hamstrings_Click(object sender, EventArgs e)
         {
-            string filePath = @"Hamstrings.mp4";
-            if (!string.IsNullOrEmpty(filePath) && File.Exists(filePath))
-            {
-                VideoPlayer.URL = filePath;
-                VideoPlayer.Ctlcontrols.play();
-                Mainform.instance.backgroundMusic.settings.mute = true;
-            }
+            VideoPlay(@"Hamstrings.mp4");
         }
     }
 }

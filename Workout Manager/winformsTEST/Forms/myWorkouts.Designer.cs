@@ -120,7 +120,6 @@ namespace winformsTEST
             this.myWorkoutsList.TabIndex = 28;
             this.myWorkoutsList.UseCompatibleStateImageBehavior = false;
             this.myWorkoutsList.View = System.Windows.Forms.View.Details;
-            this.myWorkoutsList.SelectedIndexChanged += new System.EventHandler(this.myWorkoutsList_SelectedIndexChanged);
             // 
             // nameCol
             // 

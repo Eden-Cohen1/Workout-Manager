@@ -32,33 +32,34 @@ namespace winformsTEST
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mainform));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.FirstPanel = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.MyWorkouts = new System.Windows.Forms.Button();
             this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
+            this.AboutUs = new System.Windows.Forms.Button();
+            this.Videos = new System.Windows.Forms.Button();
+            this.newWorkout = new System.Windows.Forms.Button();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.Sound = new System.Windows.Forms.Button();
+            this.Minimize = new System.Windows.Forms.Button();
+            this.Exit = new System.Windows.Forms.Button();
             this.Headline = new System.Windows.Forms.Label();
             this.Muscle1 = new System.Windows.Forms.Label();
             this.secPanel = new System.Windows.Forms.Panel();
             this.backgroundMusic = new AxWMPLib.AxWindowsMediaPlayer();
             this.background = new System.Windows.Forms.PictureBox();
-            this.Sound = new System.Windows.Forms.Button();
-            this.Minimize = new System.Windows.Forms.Button();
-            this.Exit = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.MyWorkouts = new System.Windows.Forms.Button();
-            this.AboutUs = new System.Windows.Forms.Button();
-            this.Videos = new System.Windows.Forms.Button();
-            this.newWorkout = new System.Windows.Forms.Button();
+            this.workout_logo = new System.Windows.Forms.Label();
             this.FirstPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.topPanel.SuspendLayout();
             this.secPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundMusic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -95,160 +96,6 @@ namespace winformsTEST
             this.FirstPanel.Name = "FirstPanel";
             this.FirstPanel.Size = new System.Drawing.Size(233, 772);
             this.FirstPanel.TabIndex = 18;
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(232, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1051, 49);
-            this.panel1.TabIndex = 0;
-            // 
-            // circularProgressBar1
-            // 
-            this.circularProgressBar1.AnimationFunction = ((WinFormAnimation.AnimationFunctions.Function)(resources.GetObject("circularProgressBar1.AnimationFunction")));
-            this.circularProgressBar1.AnimationSpeed = 500;
-            this.circularProgressBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.circularProgressBar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.circularProgressBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.circularProgressBar1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.circularProgressBar1.InnerMargin = 2;
-            this.circularProgressBar1.InnerWidth = -1;
-            this.circularProgressBar1.Location = new System.Drawing.Point(40, 546);
-            this.circularProgressBar1.MarqueeAnimationSpeed = 2000;
-            this.circularProgressBar1.Name = "circularProgressBar1";
-            this.circularProgressBar1.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(51)))));
-            this.circularProgressBar1.OuterMargin = -25;
-            this.circularProgressBar1.OuterWidth = 26;
-            this.circularProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(139)))), ((int)(((byte)(201)))));
-            this.circularProgressBar1.ProgressWidth = 10;
-            this.circularProgressBar1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.circularProgressBar1.Size = new System.Drawing.Size(144, 144);
-            this.circularProgressBar1.StartAngle = 270;
-            this.circularProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.circularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.circularProgressBar1.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
-            this.circularProgressBar1.SubscriptText = "";
-            this.circularProgressBar1.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.circularProgressBar1.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
-            this.circularProgressBar1.SuperscriptText = "";
-            this.circularProgressBar1.TabIndex = 0;
-            this.circularProgressBar1.Text = "Workouts";
-            this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
-            this.circularProgressBar1.Value = 68;
-            // 
-            // topPanel
-            // 
-            this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.topPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.topPanel.Controls.Add(this.Sound);
-            this.topPanel.Controls.Add(this.Minimize);
-            this.topPanel.Controls.Add(this.Exit);
-            this.topPanel.Controls.Add(this.Headline);
-            this.topPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.topPanel.Location = new System.Drawing.Point(233, 0);
-            this.topPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1203, 772);
-            this.topPanel.TabIndex = 0;
-            // 
-            // Headline
-            // 
-            this.Headline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.Headline.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Headline.Font = new System.Drawing.Font("Segoe Print", 11.525F, System.Drawing.FontStyle.Bold);
-            this.Headline.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Headline.Location = new System.Drawing.Point(0, 0);
-            this.Headline.Name = "Headline";
-            this.Headline.Size = new System.Drawing.Size(1201, 49);
-            this.Headline.TabIndex = 21;
-            this.Headline.Text = "HOME";
-            this.Headline.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Muscle1
-            // 
-            this.Muscle1.AutoSize = true;
-            this.Muscle1.Location = new System.Drawing.Point(287, 169);
-            this.Muscle1.Name = "Muscle1";
-            this.Muscle1.Size = new System.Drawing.Size(0, 13);
-            this.Muscle1.TabIndex = 0;
-            // 
-            // secPanel
-            // 
-            this.secPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.secPanel.Controls.Add(this.backgroundMusic);
-            this.secPanel.Controls.Add(this.background);
-            this.secPanel.ForeColor = System.Drawing.SystemColors.Info;
-            this.secPanel.Location = new System.Drawing.Point(233, 49);
-            this.secPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.secPanel.Name = "secPanel";
-            this.secPanel.Size = new System.Drawing.Size(1215, 721);
-            this.secPanel.TabIndex = 14;
-            // 
-            // backgroundMusic
-            // 
-            this.backgroundMusic.Enabled = true;
-            this.backgroundMusic.Location = new System.Drawing.Point(0, 695);
-            this.backgroundMusic.Name = "backgroundMusic";
-            this.backgroundMusic.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("backgroundMusic.OcxState")));
-            this.backgroundMusic.Size = new System.Drawing.Size(75, 23);
-            this.backgroundMusic.TabIndex = 21;
-            // 
-            // background
-            // 
-            this.background.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.background.Image = ((System.Drawing.Image)(resources.GetObject("background.Image")));
-            this.background.Location = new System.Drawing.Point(0, 0);
-            this.background.Name = "background";
-            this.background.Size = new System.Drawing.Size(1215, 721);
-            this.background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.background.TabIndex = 20;
-            this.background.TabStop = false;
-            // 
-            // Sound
-            // 
-            this.Sound.BackColor = System.Drawing.Color.Transparent;
-            this.Sound.FlatAppearance.BorderSize = 0;
-            this.Sound.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Sound.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Sound.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Sound.ForeColor = System.Drawing.Color.Transparent;
-            this.Sound.Image = ((System.Drawing.Image)(resources.GetObject("Sound.Image")));
-            this.Sound.Location = new System.Drawing.Point(21, 9);
-            this.Sound.Name = "Sound";
-            this.Sound.Size = new System.Drawing.Size(32, 32);
-            this.Sound.TabIndex = 22;
-            this.Sound.UseVisualStyleBackColor = false;
-            this.Sound.Click += new System.EventHandler(this.Sound_Click);
-            // 
-            // Minimize
-            // 
-            this.Minimize.FlatAppearance.BorderSize = 0;
-            this.Minimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Minimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Minimize.Image = ((System.Drawing.Image)(resources.GetObject("Minimize.Image")));
-            this.Minimize.Location = new System.Drawing.Point(1126, 9);
-            this.Minimize.Name = "Minimize";
-            this.Minimize.Size = new System.Drawing.Size(32, 32);
-            this.Minimize.TabIndex = 22;
-            this.Minimize.UseVisualStyleBackColor = true;
-            this.Minimize.Click += new System.EventHandler(this.Minimize_Click);
-            // 
-            // Exit
-            // 
-            this.Exit.BackColor = System.Drawing.Color.Transparent;
-            this.Exit.FlatAppearance.BorderSize = 0;
-            this.Exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Exit.ForeColor = System.Drawing.Color.Transparent;
-            this.Exit.Image = ((System.Drawing.Image)(resources.GetObject("Exit.Image")));
-            this.Exit.Location = new System.Drawing.Point(1164, 9);
-            this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(32, 32);
-            this.Exit.TabIndex = 22;
-            this.Exit.UseVisualStyleBackColor = false;
-            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // button5
             // 
@@ -297,6 +144,13 @@ namespace winformsTEST
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(232, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1051, 49);
+            this.panel1.TabIndex = 0;
+            // 
             // MyWorkouts
             // 
             this.MyWorkouts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
@@ -315,6 +169,39 @@ namespace winformsTEST
             this.MyWorkouts.Text = "MY WORKOUTS";
             this.MyWorkouts.UseVisualStyleBackColor = false;
             this.MyWorkouts.Click += new System.EventHandler(this.myWorkouts_Click);
+            // 
+            // circularProgressBar1
+            // 
+            this.circularProgressBar1.AnimationFunction = ((WinFormAnimation.AnimationFunctions.Function)(resources.GetObject("circularProgressBar1.AnimationFunction")));
+            this.circularProgressBar1.AnimationSpeed = 500;
+            this.circularProgressBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.circularProgressBar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.circularProgressBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.circularProgressBar1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.circularProgressBar1.InnerMargin = 2;
+            this.circularProgressBar1.InnerWidth = -1;
+            this.circularProgressBar1.Location = new System.Drawing.Point(40, 546);
+            this.circularProgressBar1.MarqueeAnimationSpeed = 2000;
+            this.circularProgressBar1.Name = "circularProgressBar1";
+            this.circularProgressBar1.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(51)))));
+            this.circularProgressBar1.OuterMargin = -25;
+            this.circularProgressBar1.OuterWidth = 26;
+            this.circularProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(139)))), ((int)(((byte)(201)))));
+            this.circularProgressBar1.ProgressWidth = 10;
+            this.circularProgressBar1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.circularProgressBar1.Size = new System.Drawing.Size(144, 144);
+            this.circularProgressBar1.StartAngle = 270;
+            this.circularProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.circularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.circularProgressBar1.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+            this.circularProgressBar1.SubscriptText = "";
+            this.circularProgressBar1.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.circularProgressBar1.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.circularProgressBar1.SuperscriptText = "";
+            this.circularProgressBar1.TabIndex = 0;
+            this.circularProgressBar1.Text = "Workouts";
+            this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.circularProgressBar1.Value = 68;
             // 
             // AboutUs
             // 
@@ -376,6 +263,132 @@ namespace winformsTEST
             this.newWorkout.UseVisualStyleBackColor = false;
             this.newWorkout.Click += new System.EventHandler(this.newWorkout_Click);
             // 
+            // topPanel
+            // 
+            this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.topPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.topPanel.Controls.Add(this.workout_logo);
+            this.topPanel.Controls.Add(this.Sound);
+            this.topPanel.Controls.Add(this.Minimize);
+            this.topPanel.Controls.Add(this.Exit);
+            this.topPanel.Controls.Add(this.Headline);
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.topPanel.Location = new System.Drawing.Point(233, 0);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(1203, 772);
+            this.topPanel.TabIndex = 0;
+            // 
+            // Sound
+            // 
+            this.Sound.BackColor = System.Drawing.Color.Transparent;
+            this.Sound.FlatAppearance.BorderSize = 0;
+            this.Sound.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Sound.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Sound.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Sound.ForeColor = System.Drawing.Color.Transparent;
+            this.Sound.Image = ((System.Drawing.Image)(resources.GetObject("Sound.Image")));
+            this.Sound.Location = new System.Drawing.Point(21, 9);
+            this.Sound.Name = "Sound";
+            this.Sound.Size = new System.Drawing.Size(32, 32);
+            this.Sound.TabIndex = 22;
+            this.Sound.UseVisualStyleBackColor = false;
+            this.Sound.Click += new System.EventHandler(this.Sound_Click);
+            // 
+            // Minimize
+            // 
+            this.Minimize.FlatAppearance.BorderSize = 0;
+            this.Minimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Minimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Minimize.Image = ((System.Drawing.Image)(resources.GetObject("Minimize.Image")));
+            this.Minimize.Location = new System.Drawing.Point(1126, 9);
+            this.Minimize.Name = "Minimize";
+            this.Minimize.Size = new System.Drawing.Size(32, 32);
+            this.Minimize.TabIndex = 22;
+            this.Minimize.UseVisualStyleBackColor = true;
+            this.Minimize.Click += new System.EventHandler(this.Minimize_Click);
+            // 
+            // Exit
+            // 
+            this.Exit.BackColor = System.Drawing.Color.Transparent;
+            this.Exit.FlatAppearance.BorderSize = 0;
+            this.Exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Exit.ForeColor = System.Drawing.Color.Transparent;
+            this.Exit.Image = ((System.Drawing.Image)(resources.GetObject("Exit.Image")));
+            this.Exit.Location = new System.Drawing.Point(1164, 9);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(32, 32);
+            this.Exit.TabIndex = 22;
+            this.Exit.UseVisualStyleBackColor = false;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            // 
+            // Headline
+            // 
+            this.Headline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.Headline.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Headline.Font = new System.Drawing.Font("Segoe Print", 11.525F, System.Drawing.FontStyle.Bold);
+            this.Headline.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Headline.Location = new System.Drawing.Point(0, 0);
+            this.Headline.Name = "Headline";
+            this.Headline.Size = new System.Drawing.Size(1201, 49);
+            this.Headline.TabIndex = 21;
+            this.Headline.Text = "HOME";
+            this.Headline.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Muscle1
+            // 
+            this.Muscle1.AutoSize = true;
+            this.Muscle1.Location = new System.Drawing.Point(287, 169);
+            this.Muscle1.Name = "Muscle1";
+            this.Muscle1.Size = new System.Drawing.Size(0, 13);
+            this.Muscle1.TabIndex = 0;
+            // 
+            // secPanel
+            // 
+            this.secPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.secPanel.Controls.Add(this.backgroundMusic);
+            this.secPanel.Controls.Add(this.background);
+            this.secPanel.ForeColor = System.Drawing.SystemColors.Info;
+            this.secPanel.Location = new System.Drawing.Point(233, 49);
+            this.secPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.secPanel.Name = "secPanel";
+            this.secPanel.Size = new System.Drawing.Size(1215, 721);
+            this.secPanel.TabIndex = 14;
+            // 
+            // backgroundMusic
+            // 
+            this.backgroundMusic.Enabled = true;
+            this.backgroundMusic.Location = new System.Drawing.Point(0, 695);
+            this.backgroundMusic.Name = "backgroundMusic";
+            this.backgroundMusic.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("backgroundMusic.OcxState")));
+            this.backgroundMusic.Size = new System.Drawing.Size(75, 23);
+            this.backgroundMusic.TabIndex = 21;
+            // 
+            // background
+            // 
+            this.background.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.background.Image = ((System.Drawing.Image)(resources.GetObject("background.Image")));
+            this.background.Location = new System.Drawing.Point(0, 0);
+            this.background.Name = "background";
+            this.background.Size = new System.Drawing.Size(1215, 721);
+            this.background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.background.TabIndex = 20;
+            this.background.TabStop = false;
+            // 
+            // workout_logo
+            // 
+            this.workout_logo.Font = new System.Drawing.Font("Segoe Print", 11.525F, System.Drawing.FontStyle.Bold);
+            this.workout_logo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.workout_logo.Location = new System.Drawing.Point(77, 11);
+            this.workout_logo.Name = "workout_logo";
+            this.workout_logo.Size = new System.Drawing.Size(207, 30);
+            this.workout_logo.TabIndex = 23;
+            this.workout_logo.Text = "(workout logo)";
+            this.workout_logo.Visible = false;
+            // 
             // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,18 +400,19 @@ namespace winformsTEST
             this.Controls.Add(this.Muscle1);
             this.Controls.Add(this.FirstPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Mainform";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SHAPE SHIFT";
             this.FirstPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.topPanel.ResumeLayout(false);
             this.secPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.backgroundMusic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -427,6 +441,7 @@ namespace winformsTEST
         private System.Windows.Forms.Button Minimize;
         private System.Windows.Forms.Button Sound;
         public AxWMPLib.AxWindowsMediaPlayer backgroundMusic;
+        public System.Windows.Forms.Label workout_logo;
     }
 }
 

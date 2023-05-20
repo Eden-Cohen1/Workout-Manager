@@ -40,6 +40,11 @@ namespace winformsTEST
                         if(workout._workoutName == item.SubItems[0].Text) // searches for the correct workout
                         {
                             Mainform.instance.Headline.Text = workout._workoutName;
+                            Mainform.instance.workout_logo.Image = workout.logo;
+                            Mainform.instance.workout_logo.ImageAlign = ContentAlignment.MiddleRight;
+                            Mainform.instance.workout_logo.Visible = true;
+                            Mainform.instance.workout_logo.Text = ("(" + item.SubItems[2].Text + ")");
+
                             WorkoutPage.currWorkout = workout;
                             foreach (StrenghtExercise ex in workout._ExerciseList.OfType<StrenghtExercise>()) // for the strenght workouts
                             {
@@ -119,9 +124,5 @@ namespace winformsTEST
 
         }
 
-        private void myWorkoutsList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

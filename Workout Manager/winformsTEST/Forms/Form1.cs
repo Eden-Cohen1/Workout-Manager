@@ -15,25 +15,31 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Media;
 using winformsTEST.Forms;
+
 namespace winformsTEST
 {
 
     public partial class Mainform : Form
     {
         public static Mainform instance;
-        public static myWorkouts screen;
-        public static AddWorkout screen2;
+        public static myWorkouts workoutScreen;
+        public static AddWorkout addWorkoutScreen;
+        public static Videos videoScreen;
+        public static AboutUs aboutScreen;
         public static SoundPlayer sPlayer = new SoundPlayer(@"button2.wav");
-        public int soundOnFlag;
+        public int soundOnFlag = 1; // to check if background music is on or off;
         public Mainform()
         {
             InitializeComponent();
             backMusic();
-            soundOnFlag = 1;
-            screen = new myWorkouts();
-            screen2 = new AddWorkout();
-            secPanel.AutoSize = true;
             instance = this;
+            //initilizing all of the screens
+            workoutScreen = new myWorkouts();
+            addWorkoutScreen = new AddWorkout();
+            videoScreen = new Videos();
+            aboutScreen = new AboutUs();
+            secPanel.AutoSize = true;
+
             //loading workout list;
             foreach (Workout workout in AddWorkout.workout_list)
             {
@@ -60,91 +66,62 @@ namespace winformsTEST
                 myWorkouts.instance.myWorkoutsList.Items.Add(listviewitem);
             }
         }
-
-        private void backMusic()
+        private void backMusic() // setting background music
         {
             backgroundMusic.URL = @"background-music.wav";
             backgroundMusic.settings.playCount = 9999;
             backgroundMusic.Visible = false;
             backgroundMusic.settings.volume = 20;
         }
-        private void newWorkout_Click(object sender, EventArgs e)
+        private void Home_Click(object sender, EventArgs e) // hoem page
         {
-            sPlayer.Play();
-            secPanel.Controls.Add(screen2);
-            screen2.BringToFront();
-            screen2.Size = secPanel.Size;
-            AddWorkout.instance.workoutAdded.Visible = false;
-            Headline.Text = "ADDING A NEW WORKOUT ";
-            Headline.BackColor = Color.FromName("RoyalBlue");
-            Minimize.BackColor = Color.FromName("RoyalBlue");
-            topPanel.BackColor = Color.FromName("RoyalBlue");
-            Exit.BackColor = Color.FromName("RoyalBlue");
-
-        }
-
-        private void myWorkouts_Click(object sender, EventArgs e)
-        {
-            sPlayer.Play();
-            secPanel.Controls.Add(screen);
-            screen.BringToFront();
-            screen.Size = this.Size;
-            Headline.Text = "MY WORKOUTS";
-            Headline.BackColor = Color.FromName("RoyalBlue");
-            Minimize.BackColor = Color.FromName("RoyalBlue");
-            Exit.BackColor = Color.FromName("RoyalBlue");
-            topPanel.BackColor = Color.FromName("RoyalBlue");
-            
-        }
-
-
-        private void Home_Click(object sender, EventArgs e)
-        {
-            sPlayer.Play();
+            Menue_click(null, Color.FromArgb(28, 26, 33), "HOME");
             secPanel.Controls.Add(background);
             background.BringToFront();
-            Headline.Text = "HOME";
-            Headline.BackColor = Color.FromArgb(28, 26, 33);
-            Minimize.BackColor = Color.FromArgb(28, 26, 33);
-            Exit.BackColor = Color.FromArgb(28, 26, 33);
-            topPanel.BackColor = Color.FromArgb(28, 26, 33);
-            
-
         }
-
-        public static void blockBTN(UserControl win, Button btn)
+        private void newWorkout_Click(object sender, EventArgs e) // new workout page
         {
-            foreach(TextBox txt in win.Controls)
-            {
-                if (txt.Text.Length == 0)
-                {
-                    btn.Enabled = false;
-                }
-                else
-                {
-                    btn.Enabled = true;
-                }
-            }
-        }
-        public static void blockBTN(Form win, Button btn)
-        {
-            foreach (Control txt in win.Controls)
-            {
-                if (txt is TextBox)
-                {
-                    if (txt.Text.Length == 0)
-                    {
-                        btn.Enabled = false;
-                    }
-                    else
-                    {
-                        btn.Enabled = true;
-                    }
-                }
-            }
+            Menue_click(addWorkoutScreen, Color.FromName("RoyalBlue"), "ADDING A NEW WORKOUT");
+            AddWorkout.instance.workoutAdded.Visible = false;
         }
 
-        private void Exit_Click(object sender, EventArgs e)
+        private void myWorkouts_Click(object sender, EventArgs e) // my workouts page
+        {
+            Menue_click(workoutScreen, Color.FromName("RoyalBlue"), "MY WORKOUTS");
+        }
+
+        private void Videos_Click(object sender, EventArgs e) // videos page
+        {
+            Menue_click(videoScreen, Color.FromName("RoyalBlue"), "VIDEO TUTURIALS");
+        }
+
+        private void AboutUs_Click(object sender, EventArgs e) // about us page
+        {
+            Menue_click(aboutScreen, Color.FromName("RoyalBlue"), "ABOUT US");
+
+        }
+
+
+        private void Menue_click(UserControl screen, Color backColor, string text) // opens a program screen and setting it up.
+        {
+            if (screen != null)
+            {
+                secPanel.Controls.Add(screen);
+                screen.BringToFront();
+                screen.Size = this.Size;
+            }
+            sPlayer.Play();
+            Headline.Text = text;
+            Headline.BackColor = backColor;
+            Minimize.BackColor = backColor;
+            Exit.BackColor = backColor;
+            topPanel.BackColor = backColor;
+            workout_logo.Visible = false;
+            videoScreen.VideoPlayer.Ctlcontrols.pause(); // stops the video when switching to another screen.
+        }
+
+
+        private void Exit_Click(object sender, EventArgs e) // closing form and serelizing data
         {
             sPlayer.Play();
             IFormatter formatter = new BinaryFormatter();
@@ -154,13 +131,13 @@ namespace winformsTEST
             this.Close();
         }
 
-        private void Minimize_Click(object sender, EventArgs e)
+        private void Minimize_Click(object sender, EventArgs e) // minimize
         {
             sPlayer.Play();
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void Sound_Click(object sender, EventArgs e)
+        private void Sound_Click(object sender, EventArgs e) // muting and playing background music
         {
             if(soundOnFlag == 1)
             {
@@ -178,32 +155,5 @@ namespace winformsTEST
 
         }
 
-        private void Videos_Click(object sender, EventArgs e)
-        {
-            Videos videoPage = new Videos();
-            sPlayer.Play();
-            secPanel.Controls.Add(videoPage);
-            videoPage.BringToFront();
-            videoPage.Size = this.Size;
-            Headline.Text = "VIDEO TUTURIALS";
-            Headline.BackColor = Color.FromName("RoyalBlue");
-            Minimize.BackColor = Color.FromName("RoyalBlue");
-            Exit.BackColor = Color.FromName("RoyalBlue");
-            topPanel.BackColor = Color.FromName("RoyalBlue");
-        }
-
-        private void AboutUs_Click(object sender, EventArgs e)
-        {
-            AboutUs about = new AboutUs();
-            sPlayer.Play();
-            secPanel.Controls.Add(about);
-            about.BringToFront();
-            about.Size = this.Size;
-            Headline.Text = "ABOUT US";
-            Headline.BackColor = Color.FromName("RoyalBlue");
-            Minimize.BackColor = Color.FromName("RoyalBlue");
-            Exit.BackColor = Color.FromName("RoyalBlue");
-            topPanel.BackColor = Color.FromName("RoyalBlue");
-        }
     }
 }
