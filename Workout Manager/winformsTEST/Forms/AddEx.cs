@@ -190,10 +190,12 @@ namespace winformsTEST
                     WorkoutPage.currWorkout._ExerciseList.Add(Exer);
                     update_list_HIIT(Exer);
                 }
+                WorkoutPage.currWorkout.CalcTotalCalories();
+                myWorkouts.currItem.SubItems[4].Text = WorkoutPage.currWorkout._totalCalories.ToString();
+
+
             }
             //WorkoutPage.currWorkout._totalCalories += WorkoutPage.currWorkout._ExerciseList[WorkoutPage.currWorkout._ExerciseList.Count()-1]._calories;
-            WorkoutPage.currWorkout.CalcTotalCalories();
-            myWorkouts.currItem.SubItems[4].Text = WorkoutPage.currWorkout._totalCalories.ToString();
             Mainform.instance.secPanel.Controls.Remove(this);
         }
 

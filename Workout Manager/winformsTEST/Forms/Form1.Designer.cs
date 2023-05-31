@@ -104,7 +104,7 @@ namespace winformsTEST
             // 
             this.label1.Font = new System.Drawing.Font("Segoe Print", 13.525F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(24, 1196);
+            this.label1.Location = new System.Drawing.Point(24, 1222);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(432, 77);
@@ -116,7 +116,7 @@ namespace winformsTEST
             this.countLabel.AutoSize = true;
             this.countLabel.Font = new System.Drawing.Font("Segoe Print", 50.525F, System.Drawing.FontStyle.Bold);
             this.countLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.countLabel.Location = new System.Drawing.Point(112, 1258);
+            this.countLabel.Location = new System.Drawing.Point(112, 1273);
             this.countLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.countLabel.Name = "countLabel";
             this.countLabel.Size = new System.Drawing.Size(0, 238);
@@ -129,7 +129,7 @@ namespace winformsTEST
             this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(139)))), ((int)(((byte)(201)))));
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe Print", 10.875F, System.Drawing.FontStyle.Bold);
+            this.button5.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold);
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -146,7 +146,7 @@ namespace winformsTEST
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(289, 1070);
+            this.pictureBox3.Location = new System.Drawing.Point(290, 1091);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(116, 102);
@@ -156,7 +156,7 @@ namespace winformsTEST
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(33, 1070);
+            this.pictureBox2.Location = new System.Drawing.Point(34, 1091);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(116, 102);
@@ -166,7 +166,7 @@ namespace winformsTEST
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(161, 1070);
+            this.pictureBox1.Location = new System.Drawing.Point(162, 1091);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(116, 102);
@@ -188,7 +188,7 @@ namespace winformsTEST
             this.MyWorkouts.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(139)))), ((int)(((byte)(201)))));
             this.MyWorkouts.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.MyWorkouts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MyWorkouts.Font = new System.Drawing.Font("Segoe Print", 11.875F, System.Drawing.FontStyle.Bold);
+            this.MyWorkouts.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold);
             this.MyWorkouts.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.MyWorkouts.Image = ((System.Drawing.Image)(resources.GetObject("MyWorkouts.Image")));
             this.MyWorkouts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -209,7 +209,7 @@ namespace winformsTEST
             this.AboutUs.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(139)))), ((int)(((byte)(201)))));
             this.AboutUs.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.AboutUs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AboutUs.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold);
+            this.AboutUs.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold);
             this.AboutUs.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.AboutUs.Image = ((System.Drawing.Image)(resources.GetObject("AboutUs.Image")));
             this.AboutUs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -218,7 +218,7 @@ namespace winformsTEST
             this.AboutUs.Name = "AboutUs";
             this.AboutUs.Size = new System.Drawing.Size(478, 163);
             this.AboutUs.TabIndex = 17;
-            this.AboutUs.Text = "ABOUT US";
+            this.AboutUs.Text = "STICKY NOTES";
             this.AboutUs.UseVisualStyleBackColor = false;
             this.AboutUs.Click += new System.EventHandler(this.AboutUs_Click);
             // 
@@ -230,7 +230,7 @@ namespace winformsTEST
             this.Videos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(139)))), ((int)(((byte)(201)))));
             this.Videos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.Videos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Videos.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Videos.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold);
             this.Videos.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Videos.Image = ((System.Drawing.Image)(resources.GetObject("Videos.Image")));
             this.Videos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -251,7 +251,7 @@ namespace winformsTEST
             this.newWorkout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(139)))), ((int)(((byte)(201)))));
             this.newWorkout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.newWorkout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.newWorkout.Font = new System.Drawing.Font("Segoe Print", 11.875F, System.Drawing.FontStyle.Bold);
+            this.newWorkout.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold);
             this.newWorkout.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.newWorkout.Image = ((System.Drawing.Image)(resources.GetObject("newWorkout.Image")));
             this.newWorkout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

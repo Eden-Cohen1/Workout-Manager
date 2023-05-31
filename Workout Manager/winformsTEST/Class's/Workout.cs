@@ -54,8 +54,8 @@ namespace winformsTEST
             this._workoutName = name;
             this._Description = description;
             this._Duration = duration;
-            type = 1;
-            logo = Properties.Resources.Strenght;
+            this.type = 1;
+            this.logo = Properties.Resources.Strenght;
 
         }
 
@@ -65,8 +65,8 @@ namespace winformsTEST
     {
         public CardioWorkout()
         {
-            type = 2;
-            logo = Properties.Resources.Endurance;
+            this.type = 2;
+            this.logo = Properties.Resources.Endurance;
 
         }
         public CardioWorkout(string name, string description, string duration)
@@ -75,8 +75,8 @@ namespace winformsTEST
             this._workoutName = name;
             this._Description = description;
             this._Duration = duration;
-            logo = Properties.Resources.Endurance;
-            type = 2;
+            this.logo = Properties.Resources.Endurance;
+            this.type = 2;
         }
 
     }

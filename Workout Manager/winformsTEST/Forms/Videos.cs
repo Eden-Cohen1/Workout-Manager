@@ -16,6 +16,8 @@ namespace winformsTEST.Forms
         public Videos()
         {
             InitializeComponent();
+            ControlExtension.Draggable(Shoulders, true);
+
         }
 
         private void VideoPlay(string filePath)

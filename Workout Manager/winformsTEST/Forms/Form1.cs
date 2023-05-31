@@ -15,6 +15,8 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Media;
 using winformsTEST.Forms;
+using winformsTEST.Class_s;
+
 
 
 namespace winformsTEST
@@ -26,11 +28,9 @@ namespace winformsTEST
         public static myWorkouts workoutScreen;
         public static AddWorkout addWorkoutScreen;
         public static Videos videoScreen;
-        public static AboutUs aboutScreen;
+        public static NotesPage aboutScreen;
         public static SoundPlayer sPlayer = new SoundPlayer(@"button2.wav");
-        public int soundOnFlag = 1; // to check if background music is on or off;
-        private bool isDragging;
-        private Point dragStart;
+        public bool isPlaying = false; // to check if background music is on or off;
         public Mainform()
         {
             InitializeComponent();
@@ -40,7 +40,7 @@ namespace winformsTEST
             workoutScreen = new myWorkouts();
             addWorkoutScreen = new AddWorkout();
             videoScreen = new Videos();
-            aboutScreen = new AboutUs();
+            aboutScreen = new NotesPage();
             secPanel.AutoSize = true;
             backgroundMusic.settings.mute = true;
 
@@ -135,7 +135,15 @@ namespace winformsTEST
             IFormatter formatter = new BinaryFormatter();
             Stream stream = new FileStream("main_file", FileMode.Create, FileAccess.Write, FileShare.None);
             formatter.Serialize(stream, AddWorkout.workout_list);
-            stream.Close();
+            stream.Close();           
+
+            IFormatter formatter2 = new BinaryFormatter();
+            Stream stream2 = new FileStream("notes_file", FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter2.Serialize(stream2, NotesPage.NotesList);
+            stream2.Close();
+
+            
+
             this.Close();
         }
 
@@ -147,20 +155,21 @@ namespace winformsTEST
 
         private void Sound_Click(object sender, EventArgs e) // muting and playing background music
         {
-            if(soundOnFlag == 1)
+            if(isPlaying == true)
             {
                 backgroundMusic.settings.mute = true;
-                soundOnFlag = 0;
+                isPlaying = false;
                 Sound.Image = Image.FromFile(@"soundOFF.PNG");
             }
             else
             {
                 backgroundMusic.settings.mute = false;
-                soundOnFlag = 1;
+                isPlaying = true;
                 Sound.Image = Image.FromFile(@"soundON.PNG");
 
             }
 
         }
+
     }
 }

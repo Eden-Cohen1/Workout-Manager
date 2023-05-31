@@ -117,39 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="myWlabel.Text" xml:space="preserve">
-    <value>Welcome to our Workout Planner!
-
-About Us:
-
-We are two passionate students who have developed this Workout Planner as part of our school project. 
-Our goal is to provide a user-friendly and effective tool for building and tracking workout plans. 
-Whether you're a fitness enthusiast, an athlete, or someone looking to get started on their fitness journey, 
-our application is here to support and guide you every step of the way.
-
-Our Mission:
-
-At Workout Planner, our mission is to empower individuals to achieve their fitness goals through structured and personalized workout plans.
-We believe that a well-designed exercise routine combined with proper tracking can lead to improved performance, increased motivation, 
-and better overall fitness. We aim to provide a seamless and intuitive experience, making it easy for users to create, modify, and monitor their workout plans effectively.
-
-Key Features:
-
-- Personalized Workout Plans: Our application allows you to create custom workout plans tailored to your specific goals, 
-whether it's building muscle, losing weight, improving endurance, or overall fitness.
-
-- Progress Tracking: Easily track your progress by logging your workout sessions, recording sets, reps, and weights.
- Visualize your progress over time to stay motivated and monitor your improvements.
-
- -Goal Setting: Set fitness goals and milestones, and our application will help you plan and organize your workouts accordingly, 
-keeping you on track towards achieving your objectives.
-
-- User-Friendly Interface: Our application features an intuitive and visually appealing interface, 
-making it easy for users of all levels of experience to navigate and use effectively.
-
-We hope our Workout Planner helps you on your fitness journey. 
-Stay committed, work hard, and enjoy the process of transforming yourself into a stronger and healthier version of you!
-
-The Workout Planner Team</value>
-  </data>
 </root>
