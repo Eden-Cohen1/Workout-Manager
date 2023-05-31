@@ -19,29 +19,14 @@ namespace winformsTEST
         public string _Duration { get; set; }
         public int _totalCalories { get; set; }
 
-        public Image logo;
+        public Image logo { get; set; }
         public List<Exercise> _ExerciseList { get; set; }
 
 
-        public Workout()
-        {
-            _workoutName = "No Name";
-            _Description = "No Description.";
-            _Duration = "No Duration";
-            _totalCalories = 0;
-        }
-        public Workout(string name, string description, string duration)
-        {
-            this._ExerciseList = new List<Exercise>();
-            this._workoutName = name;
-            this._Description = description;
-            this._Duration = duration;
-            this._totalCalories = 0;
-
-        }
-
+        public Workout(){}
         public void CalcTotalCalories()
         {
+            _totalCalories = 0;
             if (_ExerciseList.Count == 0)
             {
                 return;
@@ -57,15 +42,11 @@ namespace winformsTEST
     [Serializable]
     public class StrenghtWorkout: Workout
     {
-        int _totalNumOfSets { get; set; }
-        int _totalKilosLifted { get; set; }
 
         public StrenghtWorkout()
         {
             type = 1;
-            _totalKilosLifted = 0;
-            _totalNumOfSets = 0;
-            logo = Image.FromFile(@"Strenght.png");
+            logo = Properties.Resources.Strenght;
         }
         public StrenghtWorkout(string name, string description, string duration)
         {
@@ -74,9 +55,7 @@ namespace winformsTEST
             this._Description = description;
             this._Duration = duration;
             type = 1;
-            _totalKilosLifted = 0;
-            _totalNumOfSets = 0;
-            logo = Image.FromFile(@"Strenght.png");
+            logo = Properties.Resources.Strenght;
 
         }
 
@@ -87,7 +66,7 @@ namespace winformsTEST
         public CardioWorkout()
         {
             type = 2;
-            logo = Image.FromFile(@"Endurance.png");
+            logo = Properties.Resources.Endurance;
 
         }
         public CardioWorkout(string name, string description, string duration)
@@ -96,7 +75,7 @@ namespace winformsTEST
             this._workoutName = name;
             this._Description = description;
             this._Duration = duration;
-            logo = Image.FromFile(@"Endurance.png");
+            logo = Properties.Resources.Endurance;
             type = 2;
         }
 

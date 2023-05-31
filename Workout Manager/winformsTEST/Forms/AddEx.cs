@@ -103,6 +103,11 @@ namespace winformsTEST
             // getting all of the data from the needed forms, converting it to
             // the correct data type and sending to the right constructor, then
             // adding the new exercise that was created to the exercise list of the last workout...
+            if (string.IsNullOrEmpty(nameTextBox.Text) || string.IsNullOrEmpty(muscleTextBox.Text) || dropDown.Text == "CHOOSE A TYPE")
+            {
+                DialogResult error = MessageBox.Show("Fill all text boxes", "Error!", MessageBoxButtons.OK);
+                return;
+            }
             Mainform.sPlayer.Play();
             if (newEx == false) // adding an exercise to a new workout.
             {
@@ -186,6 +191,9 @@ namespace winformsTEST
                     update_list_HIIT(Exer);
                 }
             }
+            //WorkoutPage.currWorkout._totalCalories += WorkoutPage.currWorkout._ExerciseList[WorkoutPage.currWorkout._ExerciseList.Count()-1]._calories;
+            WorkoutPage.currWorkout.CalcTotalCalories();
+            myWorkouts.currItem.SubItems[4].Text = WorkoutPage.currWorkout._totalCalories.ToString();
             Mainform.instance.secPanel.Controls.Remove(this);
         }
 

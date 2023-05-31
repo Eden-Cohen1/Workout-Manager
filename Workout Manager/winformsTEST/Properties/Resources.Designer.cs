@@ -83,6 +83,16 @@ namespace winformsTEST.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Endurance {
+            get {
+                object obj = ResourceManager.GetObject("Endurance", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_home_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-home-48", resourceCulture);
@@ -96,6 +106,26 @@ namespace winformsTEST.Properties {
         internal static System.Drawing.Bitmap pngwing_com__6_ {
             get {
                 object obj = ResourceManager.GetObject("pngwing.com (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stickyNote {
+            get {
+                object obj = ResourceManager.GetObject("stickyNote", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Strenght {
+            get {
+                object obj = ResourceManager.GetObject("Strenght", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

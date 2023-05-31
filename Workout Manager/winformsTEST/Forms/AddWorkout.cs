@@ -69,10 +69,17 @@ namespace winformsTEST
             myWorkouts.instance.myWorkoutsList.Items.Add(listviewitem);
             ExList.Items.Clear();
             muscleList.Items.Clear();
+            Mainform.instance.countLabel.Text = workout_list.Count().ToString();
         }
 
         private void Add_New_Ex_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(nameTextBox.Text) || string.IsNullOrEmpty(DurationTextBox.Text)
+                || string.IsNullOrEmpty(DescriptionTextBox.Text) || dropDown.Text == "CHOOSE A TYPE")
+            {
+                DialogResult error = MessageBox.Show("Fill all text boxes", "Error!", MessageBoxButtons.OK);
+                return;
+            }
             Mainform.sPlayer.Play();
             AddEx screen = new AddEx();
             Mainform.instance.secPanel.Controls.Add(screen);

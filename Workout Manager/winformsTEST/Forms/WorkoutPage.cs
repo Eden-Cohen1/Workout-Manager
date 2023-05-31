@@ -37,6 +37,8 @@ namespace winformsTEST
                         {
                             currWorkout._ExerciseList.Remove(ex);
                             ExerciseList.Items.Remove(item);
+                            currWorkout.CalcTotalCalories();
+                            myWorkouts.currItem.SubItems[4].Text = currWorkout._totalCalories.ToString();
                             break;
                         }
                     }
@@ -56,7 +58,7 @@ namespace winformsTEST
                     {
                         if (ex._name == item.SubItems[0].Text)
                         {
-                            EditEx edit_window = new EditEx();
+                            EditEx edit_window = new EditEx(); // unabling all not relevant text boxes
                             if (ex.type == 1)
                             {
                                 edit_window.restTextBox.Enabled = false;
@@ -108,7 +110,7 @@ namespace winformsTEST
             }
         }
 
-        private void Add_Ex_Click(object sender, EventArgs e)
+        private void Add_Ex_Click(object sender, EventArgs e) // add ex screen 
         {
             Mainform.sPlayer.Play();
             AddEx screen = new AddEx();

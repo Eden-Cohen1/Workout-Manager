@@ -137,7 +137,7 @@ namespace winformsTEST
             this.addExercise.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addExercise.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addExercise.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.addExercise.Location = new System.Drawing.Point(575, 134);
+            this.addExercise.Location = new System.Drawing.Point(573, 407);
             this.addExercise.Name = "addExercise";
             this.addExercise.Size = new System.Drawing.Size(180, 51);
             this.addExercise.TabIndex = 5;
@@ -250,9 +250,9 @@ namespace winformsTEST
             this.ExList.ItemHeight = 28;
             this.ExList.Items.AddRange(new object[] {
             "EXERCISE NAME"});
-            this.ExList.Location = new System.Drawing.Point(694, 211);
+            this.ExList.Location = new System.Drawing.Point(692, 149);
             this.ExList.Name = "ExList";
-            this.ExList.Size = new System.Drawing.Size(217, 200);
+            this.ExList.Size = new System.Drawing.Size(217, 228);
             this.ExList.TabIndex = 23;
             // 
             // Exlistlabel
@@ -277,9 +277,9 @@ namespace winformsTEST
             this.muscleList.ItemHeight = 28;
             this.muscleList.Items.AddRange(new object[] {
             "MUSCLE"});
-            this.muscleList.Location = new System.Drawing.Point(575, 211);
+            this.muscleList.Location = new System.Drawing.Point(573, 149);
             this.muscleList.Name = "muscleList";
-            this.muscleList.Size = new System.Drawing.Size(115, 200);
+            this.muscleList.Size = new System.Drawing.Size(115, 228);
             this.muscleList.TabIndex = 25;
             // 
             // AddWorkout

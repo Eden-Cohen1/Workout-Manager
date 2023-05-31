@@ -16,6 +16,7 @@ using System.Runtime.InteropServices;
 using System.Media;
 using winformsTEST.Forms;
 
+
 namespace winformsTEST
 {
 
@@ -28,6 +29,8 @@ namespace winformsTEST
         public static AboutUs aboutScreen;
         public static SoundPlayer sPlayer = new SoundPlayer(@"button2.wav");
         public int soundOnFlag = 1; // to check if background music is on or off;
+        private bool isDragging;
+        private Point dragStart;
         public Mainform()
         {
             InitializeComponent();
@@ -39,6 +42,7 @@ namespace winformsTEST
             videoScreen = new Videos();
             aboutScreen = new AboutUs();
             secPanel.AutoSize = true;
+            backgroundMusic.settings.mute = true;
 
             //loading workout list;
             foreach (Workout workout in AddWorkout.workout_list)
@@ -63,15 +67,19 @@ namespace winformsTEST
                 string calories = workout._totalCalories.ToString();
                 string[] listnames = { name, duration + " minutes", type, description,calories };
                 var listviewitem = new ListViewItem(listnames);
+                workout_type.Image = workout.logo;
                 myWorkouts.instance.myWorkoutsList.Items.Add(listviewitem);
+                countLabel.Text = AddWorkout.workout_list.Count().ToString();
+           
             }
         }
+
         private void backMusic() // setting background music
         {
             backgroundMusic.URL = @"background-music.wav";
             backgroundMusic.settings.playCount = 9999;
             backgroundMusic.Visible = false;
-            backgroundMusic.settings.volume = 20;
+            backgroundMusic.settings.volume = 50;
         }
         private void Home_Click(object sender, EventArgs e) // hoem page
         {
@@ -116,7 +124,7 @@ namespace winformsTEST
             Minimize.BackColor = backColor;
             Exit.BackColor = backColor;
             topPanel.BackColor = backColor;
-            workout_logo.Visible = false;
+            workout_type.Visible = false;
             videoScreen.VideoPlayer.Ctlcontrols.pause(); // stops the video when switching to another screen.
         }
 
@@ -154,6 +162,5 @@ namespace winformsTEST
             }
 
         }
-
     }
 }

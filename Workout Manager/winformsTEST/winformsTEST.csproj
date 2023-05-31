@@ -216,5 +216,14 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Endurance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Strenght.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\stickyNote.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

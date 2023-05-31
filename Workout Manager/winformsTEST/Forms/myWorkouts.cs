@@ -19,6 +19,7 @@ namespace winformsTEST
         public static string rest = "1:30 minutes";
         public static string none = "-------";
         public static myWorkouts instance;
+        public static ListViewItem currItem;
 
         public myWorkouts()
         {
@@ -33,6 +34,7 @@ namespace winformsTEST
             {
                 if (item.Selected == true)
                 {
+                    currItem = item;
                     WorkoutPage screen = new WorkoutPage();
                     Mainform.instance.secPanel.Controls.Add(screen);
                     screen.BringToFront();
@@ -40,11 +42,11 @@ namespace winformsTEST
                         if(workout._workoutName == item.SubItems[0].Text) // searches for the correct workout
                         {
                             Mainform.instance.Headline.Text = workout._workoutName;
-                            Mainform.instance.workout_logo.Image = workout.logo;
-                            Mainform.instance.workout_logo.ImageAlign = ContentAlignment.MiddleRight;
-                            Mainform.instance.workout_logo.Visible = true;
-                            Mainform.instance.workout_logo.Text = ("(" + item.SubItems[2].Text + ")");
-
+                            Mainform.instance.workout_type.Image = workout.logo;
+                            Mainform.instance.workout_type.ImageAlign = ContentAlignment.MiddleRight;
+                            Mainform.instance.workout_type.Visible = true;
+                            Mainform.instance.workout_type.BringToFront();
+                            Mainform.instance.workout_type.Text = ("(" + item.SubItems[2].Text + ")");
                             WorkoutPage.currWorkout = workout;
                             foreach (StrenghtExercise ex in workout._ExerciseList.OfType<StrenghtExercise>()) // for the strenght workouts
                             {
@@ -120,6 +122,8 @@ namespace winformsTEST
                     }
 
                 }
+                Mainform.instance.countLabel.Text = AddWorkout.workout_list.Count().ToString();
+
             }
 
         }
